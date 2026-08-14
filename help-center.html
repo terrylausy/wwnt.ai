@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WWNT Robotics Help Center  knowledge base, shipping & logistics, pricing, technical support, and AI live chat for universities, labs, and startups."
+    />
+    <title>Help Center  WWNT Robotics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=20260901" />
+    <link rel="stylesheet" href="css/mobile.css?v=20260901" />
+  </head>
+  <body data-page="help">
+    <div id="site-header"></div>
+
+    <main>
+      <!-- Hero -->
+      <section class="page-hero compact help-hero">
+        <div class="container">
+          <span class="eyebrow">Help Center</span>
+          <h1>How can we help?</h1>
+          <p>
+            Search our knowledge base, browse by topic, or chat with our AI assistant 
+            built for universities, labs, and startups building robot dreams.
+          </p>
+          <div class="help-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input
+              type="text"
+              id="help-search-input"
+              placeholder="Search for help articles, e.g. shipping, SDK, warranty..."
+              aria-label="Search help articles"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Help Layout: Sidebar + Content -->
+      <section class="section help-layout-section">
+        <div class="container help-layout">
+          <!-- Sidebar -->
+          <aside class="help-sidebar" id="help-sidebar">
+            <h2 class="help-sidebar-title">Browse Topics</h2>
+            <nav class="help-sidebar-nav" aria-label="Help topics">
+              <a href="#topic-ordering" class="help-sidebar-link is-active" data-topic="ordering">
+                <span class="help-topic-icon"></span>
+                Ordering &amp; Quotes
+              </a>
+              <a href="#topic-shipping" class="help-sidebar-link" data-topic="shipping">
+                <span class="help-topic-icon"></span>
+                Shipping &amp; Logistics
+              </a>
+              <a href="#topic-pricing" class="help-sidebar-link" data-topic="pricing">
+                <span class="help-topic-icon"></span>
+                Pricing &amp; Payment
+              </a>
+              <a href="#topic-tech" class="help-sidebar-link" data-topic="tech">
+                <span class="help-topic-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                </span>
+                Technical Support
+              </a>
+              <a href="#topic-opensource" class="help-sidebar-link" data-topic="opensource">
+                <span class="help-topic-icon"></span>
+                Open Source &amp; SDK
+              </a>
+              <a href="#topic-products" class="help-sidebar-link" data-topic="products">
+                <span class="help-topic-icon"></span>
+                Products &amp; Specs
+              </a>
+              <a href="#topic-warranty" class="help-sidebar-link" data-topic="warranty">
+                <span class="help-topic-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                </span>
+                Warranty &amp; Returns
+              </a>
+            </nav>
+
+            <div class="help-sidebar-contact">
+              <h3>Still need help?</h3>
+              <p>Reach our team directly or use the AI chat in the corner.</p>
+              <a href="mailto:Support@wwntAI.com" class="help-contact-link">
+                <strong>Support@wwntAI.com</strong>
+              </a>
+              <a href="tel:+16626814342" class="help-contact-link">+1-662-681-4342</a>
+              <a href="https://wa.me/8618925826701" target="_blank" rel="noopener" class="help-contact-link">
+                WhatsApp: +86-189-2582-6701
+              </a>
+            </div>
+          </aside>
+
+          <!-- Main Content -->
+          <div class="help-content">
+            <!-- Quick Cards -->
+            <div class="help-quick-grid">
+              <a href="#topic-ordering" class="help-quick-card">
+                <span class="help-quick-icon"></span>
+                <h3>Ordering &amp; Quotes</h3>
+                <p>How to request a quote, place orders, and lead times.</p>
+              </a>
+              <a href="#topic-shipping" class="help-quick-card">
+                <span class="help-quick-icon"></span>
+                <h3>Shipping &amp; Logistics</h3>
+                <p>Carriers, delivery windows, and tracking your shipment.</p>
+              </a>
+              <a href="#topic-tech" class="help-quick-card">
+                <span class="help-quick-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </span>
+                <h3>Technical Support</h3>
+                <p>SDK setup, troubleshooting, and engineering help.</p>
+              </a>
+              <a href="#topic-opensource" class="help-quick-card">
+                <span class="help-quick-icon"></span>
+                <h3>Open Source &amp; SDK</h3>
+                <p>Public repos, documentation, and getting started.</p>
+              </a>
+            </div>
+
+            <!-- FAQ: Ordering -->
+            <div class="help-topic-block" id="topic-ordering" data-topic="ordering">
+              <h2 class="help-topic-heading">Ordering &amp; Quotes</h2>
+              <div class="faq-accordion">
+                <details class="faq-item">
+                  <summary>How do I request a quote or place an order?</summary>
+                  <div class="faq-answer">
+                    <p>Visit our <a href="store.html">Store</a>, find your product, and click "Request a Quote" to submit an inquiry form. For bulk or custom orders, email <a href="mailto:Support@wwntAI.com">Support@wwntAI.com</a> with your institution name, product list, and quantity  we reply within 24 hours.</p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary>Do you offer educational or startup discounts?</summary>
+                  <div class="faq-answer">
+                    <p>Yes. WWNT Robotics serves universities, labs, and small startups. Qualified institutions and early-stage teams can receive preferential pricing. Mention your affiliation when requesting a quote and we'll apply the best available rate.</p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary>What is the typical lead time after ordering?</summary>
+                  <div class="faq-answer">
+                    <p>In-stock items ship within 48 hours. Made-to-order platforms (e.g. training platforms, custom arms) typically take 2C4 weeks. You'll receive a confirmed delivery estimate with your quote.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <!-- FAQ: Shipping -->
+            <div class="help-topic-block" id="topic-shipping" data-topic="shipping">
+              <h2 class="help-topic-heading">Shipping &amp; Logistics</h2>
+              <div class="faq-accordion">
+                <details class="faq-item">
+                  <summary>What shipping methods are available?</summary>
+                  <div class="faq-answer">
+                    <p>We ship worldwide via DHL, FedEx, and SF Express for international orders, and dedicated freight for large platforms. Incoterms (EXW / FOB / DAP) are flexible  confirm your preferred terms in the inquiry.</p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary>How can I track my shipment?</summary>
+                  <div class="faq-answer">
+                    <p>Once your order ships, you'll receive a tracking number. Track it anytime at <a href="https://jtour.ai" target="_blank" rel="noopener">jtour.ai</a> or via the "Track Shipment" link in the top navigation.</p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary>Do you handle customs and import duties?</summary>
+                  <div class="faq-answer">
+                    <p>For DAP terms we handle export customs; import duties and local taxes are the receiver's responsibility. For DDP terms (available on request for major destinations), we arrange door-to-door clearance. Check with us for your country's options.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <!-- FAQ: Pricing -->
+            <div class="help-topic-block" id="topic-pricing" data-topic="pricing">
+              <h2 class="help-topic-heading">Pricing &amp; Payment</h2>
+              <div class="faq-accordion">
+                <details class="faq-item">
+                  <summary>What's included in the product price?</summary>
+                  <div class="faq-answer">
+                    <p>Listed prices cover the hardware, standard accessories, and basic documentation. Open-source products include full SDK access. Custom integration, training, and extended warranties are quoted separately. See <a href="pricing.html">Pricing</a> for details.</p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary>What payment methods do you accept?</summary>
+                  <div class="faq-answer">
+                    <p>We accept bank transfer (T/T), PayPal, and corporate purchase orders from verified institutions. Payment terms (deposit / balance) are confirmed at order confirmation.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <!-- FAQ: Tech Support -->
+            <div class="help-topic-block" id="topic-tech" data-topic="tech">
+              <h2 class="help-topic-heading">Technical Support</h2>
+              <div class="faq-accordion">
+                <details class="faq-item">
+                  <summary>How do I get technical support?</summary>
+                  <div class="faq-answer">
+                    <p>For technical questions, email <a href="mailto:Support@wwntAI.com">Support@wwntAI.com</a> with your product model, serial number, and a description of the issue. You can also use the AI chat in the bottom-right corner for instant guidance. SLA response: within 24 hours on weekdays.</p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary>Do you offer remote debugging or on-site support?</summary>
+                  <div class="faq-answer">
+                    <p>Yes. Remote debugging is available via video call for setup and integration issues. On-site support is available for enterprise and institutional customers in mainland China  request it when opening a support ticket.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <!-- FAQ: Open Source -->
+            <div class="help-topic-block" id="topic-opensource" data-topic="opensource">
+              <h2 class="help-topic-heading">Open Source &amp; SDK</h2>
+              <div class="faq-accordion">
+                <details class="faq-item">
+                  <summary>Where can I find the open-source repositories?</summary>
+                  <div class="faq-answer">
+                    <p>Our public repos are on the <a href="opensource.html">Open Source</a> page  including the underlying SDK, simulation demos, and algorithm projects. Hardware is fully decoupled from software for easy customization.</p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary>Which frameworks are supported?</summary>
+                  <div class="faq-answer">
+                    <p>Our platforms integrate with ROS 2, LeRobot, Foxglove, and popular simulation environments. Each repo includes quick-start docs and example code to get you running on day one.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <!-- FAQ: Products -->
+            <div class="help-topic-block" id="topic-products" data-topic="products">
+              <h2 class="help-topic-heading">Products &amp; Specs</h2>
+              <div class="faq-accordion">
+                <details class="faq-item">
+                  <summary>What product categories do you offer?</summary>
+                  <div class="faq-answer">
+                    <p>We offer dexterous hands, humanoid &amp; quadruped robots, robot arms, sensors, and training platforms  from leading brands plus our own WWNT Robotics line. Browse the full catalog on the <a href="store.html">Store</a>.</p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary>Can I customize a product for my research?</summary>
+                  <div class="faq-answer">
+                    <p>Yes. Many platforms are composable  grippers, lenses, and end-effectors can be swapped. For fully custom builds, describe your task space and payload needs in your inquiry and our engineering team will propose a configuration.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <!-- FAQ: Warranty -->
+            <div class="help-topic-block" id="topic-warranty" data-topic="warranty">
+              <h2 class="help-topic-heading">Warranty &amp; Returns</h2>
+              <div class="faq-accordion">
+                <details class="faq-item">
+                  <summary>What is the warranty period?</summary>
+                  <div class="faq-answer">
+                    <p>Standard hardware warranty is 12 months from delivery, covering manufacturing defects. Extended warranties (24C36 months) are available for institutional orders. Contact us for terms.</p>
+                  </div>
+                </details>
+                <details class="faq-item">
+                  <summary>What is your return policy?</summary>
+                  <div class="faq-answer">
+                    <p>Unopened standard products can be returned within 7 days of delivery for a refund (excluding shipping). Custom and made-to-order items are non-returnable unless defective. Initiate a return by emailing <a href="mailto:Support@wwntAI.com">Support@wwntAI.com</a> with your order number.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <!-- Contact CTA -->
+            <div class="help-cta">
+              <div class="help-cta-text">
+                <h2>Can't find what you need?</h2>
+                <p>Our AI assistant is online 24/7 in the bottom-right corner, or reach our team directly.</p>
+              </div>
+              <div class="help-cta-actions">
+                <a href="mailto:Support@wwntAI.com" class="btn btn-primary">Email Support</a>
+                <a href="contact.html" class="btn btn-outline">Contact Form</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="js/include.js?v=20260901"></script>
+    <script src="js/help-center.js?v=20260901"></script>
+  </body>
+</html>

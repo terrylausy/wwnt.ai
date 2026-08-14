@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact WWNT Robotics sales inquiry, technical support, business partnership, and custom integration solutions."
+    />
+    <title>Contact  WWNT Robotics</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=20260901" />
+    <link rel="stylesheet" href="css/mobile.css?v=20260901" />
+  </head>
+
+  <body data-page="help">
+    <div id="site-header"></div>
+
+    <main>
+      <!-- Hero -->
+      <section class="page-hero compact">
+        <div class="container">
+          <span class="eyebrow">Contact Us</span>
+          <h1>Get in Touch</h1>
+          <p>
+            Sales inquiries, technical support, enterprise customization, or business partnerships 
+            we will reply within 24 hours.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Content -->
+      <section class="section">
+        <div class="container product-layout">
+          <!-- Left: Contact Info -->
+          <div>
+            <div class="glass-panel detail-panel">
+              <div class="panel-head">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M21 10c0 6-9 11-9 11S3 16 3 10a9 9 0 1118 0z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8" />
+                </svg>
+                <h2>Office & Delivery Center</h2>
+              </div>
+              <p>
+                Zhangjiang Robot Valley, Pudong New Area, Shanghai<br />
+                Weekdays 9:30 C 18:30 (on-site visits by appointment)
+              </p>
+            </div>
+
+            <div class="contact-list" style="margin-top: 1rem;">
+              <a href="mailto:Support@wwntAI.com" class="contact-item">
+                <span class="contact-label">General Email</span>
+                <strong>Support@wwntAI.com</strong>
+              </a>
+              <a href="mailto:Support@wwntAI.com" class="contact-item">
+                <span class="contact-label">Sales Inquiry</span>
+                <strong>Support@wwntAI.com</strong>
+              </a>
+              <a href="tel:+16626814342" class="contact-item">
+                <span class="contact-label">Customer Service</span>
+                <strong>+1-662-681-4342</strong>
+              </a>
+              <a href="https://wa.me/8618925826701" target="_blank" rel="noopener" class="contact-item">
+                <span class="contact-label">WhatsApp</span>
+                <strong>+86-189-2582-6701</strong>
+              </a>
+            </div>
+
+            <div class="glass-panel detail-panel" style="margin-top: 1rem;">
+              <div class="panel-head">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                </svg>
+                <h2>Service Commitment</h2>
+              </div>
+              <ul style="padding-left: 1.1rem; color: var(--gray-500);">
+                <li>Email and form responses within 24 hours</li>
+                <li>One-on-one support for enterprise clients</li>
+                <li>Remote debugging and on-site deployment supported</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="glass-panel detail-panel">
+            <div class="panel-head">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <h2>Quick Message</h2>
+            </div>
+
+            <form id="contact-form" name="contact" method="POST" netlify action="/thanks" style="display: grid; gap: 1rem;">
+              <input type="hidden" name="form-name" value="contact" />
+              <label class="field">
+                <span>Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Enter your name"
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid var(--gray-200);
+                    font: inherit;
+                  "
+                />
+              </label>
+
+              <label class="field">
+                <span>Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="example@domain.com"
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid var(--gray-200);
+                    font: inherit;
+                  "
+                />
+              </label>
+
+              <label class="field">
+                <span>Inquiry Type</span>
+                <select
+                  name="type"
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid var(--gray-200);
+                    font: inherit;
+                  "
+                >
+                  <option>Product Sales</option>
+                  <option>Enterprise Customization</option>
+                  <option>Technical Support</option>
+                  <option>Business Partnership</option>
+                  <option>Other</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Details</span>
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Briefly describe your use case and requirements..."
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid var(--gray-200);
+                    font: inherit;
+                    resize: vertical;
+                  "
+                ></textarea>
+              </label>
+
+              <button type="submit" class="btn btn-primary" style="justify-self: start;">
+                Submit Message
+              </button>
+            </form>
+
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--gray-400);">
+              * After submission, we will contact you by email and will not use your information for any other purpose.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ / Note -->
+      <section class="section checkout-note">
+        <div class="container note-grid">
+          <article>
+            <h3>FAQ</h3>
+            <ul>
+              <li>Do you support enterprise procurement contracts and invoices?</li>
+              <li>Do you provide ROS 2 drivers and example projects?</li>
+              <li>Do you support customized mechanical and electrical interfaces?</li>
+              <li>Are there preferential policies for universities and research institutions?</li>
+            </ul>
+          </article>
+          <article class="note-highlight">
+            <h3>Book an On-site Visit</h3>
+            <p>
+              We offer scheduled visits to our Shanghai Zhangjiang office and test lab
+              to experience core products such as the Synova Hand X1 and Neura Arm Pro in person.
+            </p>
+            <a href="mailto:Support@wwntAI.com" class="btn btn-primary">
+              Book a Visit
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    </button>
+
+    <script src="js/include.js?v=20260901"></script>
+    <script src="js/mobile.js?v=20260901"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contact-form");
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+
+        form?.addEventListener("submit", (e) => {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Submitting...";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WWNT Robotics bionic robotics store  bionic hands, arms, sensing kits and full-body platforms. Transparent pricing, engineering-grade support."
+    />
+    <title>WWNT Robotics  Bionic Robotics Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&family=Georgia:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=20260901" />
+    <link rel="stylesheet" href="css/mobile.css?v=20260901" />
+  </head>
+  <body data-page="home">
+    <div id="site-header"></div>
+
+    <main>
+      <!-- ===================== Full-screen Hero Carousel ===================== -->
+      <section class="hero-banner" id="hero-banner">
+        <!-- Slides -->
+        <div class="hero-slides" id="hero-slides">
+          <div
+            class="hero-slide active"
+            style="background-image: url('https://lizhicdn.search.qq.com/cdn/ybimages/9005/9005_c13b0e805384c2f8c2f26c572e71580b/02b3eb7dec9c6c256c590de533d3e6cd.jpg')"
+          >
+            <div class="hero-overlay"></div>
+          </div>
+
+          <div
+            class="hero-slide"
+            style="background-image: url('https://thumbnail.wxqcloud.qq.com.cn/v2/thumb/retype_exclude_gif/ext/auto/q/95/crop/xy/ai/w/540/h/380/resize/w/540/h/380/t/0?appid=201023&url=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_png%2FaWpUSOEFicFR78wJmeickkb0bqepE8eghpGiaWCVCG0PHGq0CPvRE8IpNMtTyicRd2pwGxpkbqnQ7icqd8kBDbxmH7Q%2F640%3Fwx_fmt%3Dpng')"
+          >
+            <div class="hero-overlay"></div>
+          </div>
+
+          <div
+            class="hero-slide"
+            style="background-image: url('https://thumbnail.wxqcloud.qq.com.cn/v2/thumb/retype_exclude_gif/ext/auto/q/95/crop/xy/ai/w/540/h/304/resize/w/540/h/304/t/0?appid=201023&url=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_jpg%2FMIgO9EvXauhWmQb36j9YJMDckuKZHvKepsSfw98VLSunzJpBjrOUjPyGpnib7skbPYXcEu6X3QSuxGibFM3ESftuBtNmqiceibbC9bwUzJb2r3M%2F640%3Fwx_fmt%3Djpeg')"
+          >
+            <div class="hero-overlay"></div>
+          </div>
+
+          <div
+            class="hero-slide"
+            style="background-image: url('https://thumbnail01.wxqcloud.qq.com.cn/v2/thumb/retype_exclude_gif/ext/auto/q/95/crop/xy/ai/w/540/h/362/resize/w/540/h/362/t/0?appid=201023&url=https%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_jpg%2FsfOOkViaHVBcS7sRpic627YWJeWhFzq4LC1Ovf3r9Dw21s9xsAOqYMWbrckmZRknq42NNV9GibBezOfmZ0WKqheNQ%2F640%3Fwx_fmt%3Djpeg')"
+          >
+            <div class="hero-overlay"></div>
+          </div>
+
+          <div
+            class="hero-slide"
+            style="background-image: url('https://thumbnail.wxqcloud.qq.com.cn/v2/thumb/retype_exclude_gif/ext/auto/q/95/crop/xy/ai/w/540/h/414/resize/w/540/h/414/t/0?appid=201023&url=https%3A%2F%2Fmmbiz.qpic.cn%2Fsz_mmbiz_png%2Fol909bx6u2gYfMEYhZzos2O35lgibhBcQaqUtEOt0cOxXBLkJqxq1nY5nibbsqGJyqP8kicQ3rZp14zTQOod2tPicA%2F640%3Fwx_fmt%3Dpng%26from%3Dappmsg')"
+          >
+            <div class="hero-overlay"></div>
+          </div>
+
+          <div
+            class="hero-slide"
+            style="background-image: url('https://lizhicdn.search.qq.com/cdn/ybimages/9005/9005_5545888316ee1d561092b191fdea6a09/e13880194150e70abdaeaaf8dee56714.jpg')"
+          >
+            <div class="hero-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Particle decoration -->
+        <div class="hero-particles" id="hero-particles">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <!-- Cursor glow -->
+        <div class="hero-cursor-glow" id="cursor-glow"></div>
+
+        <!-- Left arrow -->
+        <button class="carousel-btn prev" id="carousel-prev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+
+        <!-- Right arrow -->
+        <button class="carousel-btn next" id="carousel-next" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 6 15 12 9 18" />
+          </svg>
+        </button>
+
+        <!-- Carousel content -->
+        <div class="hero-content" id="hero-content">
+          <span class="slide-eyebrow">Dexterous Hand</span>
+          <h1>Redefining Human-<br /><span class="text-gradient">Machine Touch</span></h1>
+          <span class="artistic-subtitle">Bringing humanoid robots from the lab to real-world scenarios</span>
+          <p>
+            A curated selection of the world's top bionic hands, collaborative arms, sensing kits, and full-body platforms.
+            Transparent pricing, open-source driven, engineering-grade delivery built for research, rehab, and premium showcases.
+          </p>
+          <div class="slide-tech-badges">
+            <span class="tech-badge">DOF <span class="badge-value">22</span></span>
+            <span class="tech-badge">Tactile Feedback</span>
+            <span class="tech-badge">ROS 2 Native</span>
+          </div>
+          <div class="hero-actions">
+            <a href="store.html" class="btn btn-primary btn-lg">Browse Store</a>
+            <a href="store.html?category=dexterous-hand" class="btn btn-ghost btn-lg">Trending: Bionic Hands</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong data-count="12">0</strong><span>Core SKUs</span></div>
+            <div><strong data-count="48">0</strong><span>Hour Fast Shipping</span></div>
+            <div><strong>ROS 2</strong><span>Native Support</span></div>
+          </div>
+        </div>
+
+        <!-- Bottom dots -->
+        <div class="hero-slide-dots" id="hero-dots">
+          <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+          <button class="dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="dot" data-index="2" aria-label="Slide 3"></button>
+          <button class="dot" data-index="3" aria-label="Slide 4"></button>
+          <button class="dot" data-index="4" aria-label="Slide 5"></button>
+          <button class="dot" data-index="5" aria-label="Slide 6"></button>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="hero-scroll-hint" id="scroll-hint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="2" width="12" height="20" rx="6" />
+            <line x1="12" y1="6" x2="12" y2="12" />
+          </svg>
+        </div>
+
+        <!-- Carousel frame data -->
+        <script type="application/json" id="slide-data">
+          [
+            {
+              "eyebrow": "Dexterous Hand",
+              "title": "Redefining Human-<br><span class='text-gradient'>Machine Touch</span>",
+              "artistic": "Bringing humanoid robots from the lab to real-world scenarios",
+              "desc": "A curated selection of the world's top bionic hands, collaborative arms, sensing kits, and full-body platforms. Transparent pricing, open-source driven, engineering-grade delivery built for research, rehab, and premium showcases.",
+              "badges": [
+                { "label": "DOF", "value": "22" },
+                { "label": "Tactile Feedback" },
+                { "label": "ROS 2 Native" }
+              ]
+            },
+            {
+              "eyebrow": "Bionic Arm",
+              "title": "Precision <span class='text-gradient'>Engineered</span><br>for Collaboration",
+              "artistic": "Bionic collaborative arm  redefining human-robot coexistence",
+              "desc": "Pneumatic-muscle actuation, 17 degrees of freedom, precisely replicating human-arm kinematics. Plug-and-play, compatible with mainstream collaborative platforms and research frameworks.",
+              "badges": [
+                { "label": "DOF", "value": "17" },
+                { "label": "Pneumatic Drive" },
+                { "label": "Plug & Play" }
+              ]
+            },
+            {
+              "eyebrow": "Humanoid Platform",
+              "title": "The Future of <span class='text-gradient'>Embodied AI</span>",
+              "artistic": "Full-size humanoid robot entering the embodied-intelligence era",
+              "desc": "36+ full-body DOF, integrating bipedal walking, bimanual collaboration, and a head vision system. Open-source control stack to accelerate your embodied-AI research.",
+              "badges": [
+                { "label": "DOF", "value": "36+" },
+                { "label": "Bipedal Walking" },
+                { "label": "Visual Perception" }
+              ]
+            },
+            {
+              "eyebrow": "Soft Robotics",
+              "title": "Adaptive Grasping,<br><span class='text-gradient'>Reinvented</span>",
+              "artistic": "Ultra-soft bionic hand  embracing complex grasps with soft tech",
+              "desc": "Soft pneumatic structure that adaptively wraps objects without complex sensing. Ideal for food, medical, and light-assembly applications.",
+              "badges": [
+                { "label": "Fingers", "value": "5" },
+                { "label": "Soft Pneumatic" },
+                { "label": "Adaptive Grasp" }
+              ]
+            },
+            {
+              "eyebrow": "Wheeled Humanoid",
+              "title": "Mobility Meets <span class='text-gradient'>Dexterity</span>",
+              "artistic": "Wheeled humanoid service robot  efficient mobility  bimanual operation",
+              "desc": "Wheeled base + bionic dual arms + head sensing, purpose-built for service scenarios. Rapid deployment, supports secondary development.",
+              "badges": [
+                { "label": "Speed", "value": "1.5m/s" },
+                { "label": "Bimanual Collab" },
+                { "label": "Service Scenarios" }
+              ]
+            },
+            {
+              "eyebrow": "Tactile System",
+              "title": "Sensing the Unseen,<br>Moving the <span class='text-gradient'>Future</span>",
+              "artistic": "Multi-axis tactile sensing system  giving robots a real sense of touch",
+              "desc": "High-resolution tactile array + force-feedback controller, millisecond response. Letting robots 'feel' every contact.",
+              "badges": [
+                { "label": "Resolution", "value": "0.1N" },
+                { "label": "Tactile Array" },
+                { "label": "Force Feedback" }
+              ]
+            }
+          ]
+        </script>
+      </section>
+      <div></div>
+            <section class="section trust-strip">
+    
+      </section>
+      <!-- ===================== Trust strip ===================== -->
+      <section class="section trust-strip">
+        <div class="container trust-grid">
+          <article class="trust-item">
+            <h3>Fast Fulfillment</h3>
+            <p>Select in-stock items ship within 48 hours or support local pickup.</p>
+          </article>
+          <article class="trust-item">
+            <h3>Engineering Support</h3>
+            <p>Integration consulting, demo builds, and deployment docs every step of the way.</p>
+          </article>
+          <article class="trust-item">
+            <h3>Open-Source Ecosystem</h3>
+            <p>Every SKU ships with a GitHub repository and example projects.</p>
+          </article>
+          <article class="trust-item">
+            <h3>Flexible Procurement</h3>
+            <p>Single purchases, bulk orders, and enterprise custom solutions all supported.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===================== Trending ===================== -->
+      <section class="section" id="hot-section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Trending</span>
+              <h2>Hardware engineers buy most</h2>
+            </div>
+            <a href="store.html" class="text-link">View all </a>
+          </div>
+          <div id="hot-grid" class="product-grid"></div>
+        </div>
+      </section>
+
+      <!-- ===================== Editor's picks ===================== -->
+      <section class="section" id="featured-section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">★ Editor's Picks</span>
+              <h2>High-rated  best value choices</h2>
+            </div>
+            <a href="store.html" class="text-link">View all </a>
+          </div>
+          <div id="featured-grid" class="product-grid"></div>
+        </div>
+      </section>
+
+      <!-- ===================== Product lineup ===================== -->
+      <section class="section products-preview">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Product Lineup</span>
+              <h2>Five product lines</h2>
+              <p>From hardware to software, from classroom to lab covering the full scope of university AI education</p>
+            </div>
+          </div>
+          <div class="products-preview-grid">
+            <article class="products-preview-card">
+              <div class="products-preview-icon"></div>
+              <h3>Embodied AI Robots</h3>
+              <p>Strategic partnership with HighTorque Robotics, offering the Mini Pi high-performance bipedal robot and Panthera-HT open-source arm</p>
+              <div class="products-preview-tags">
+                <span>Mini Pi</span>
+                <span>Panthera-HT</span>
+              </div>
+            </article>
+            <article class="products-preview-card">
+              <div class="products-preview-icon"></div>
+              <h3>OpenArm</h3>
+              <p>A fully open-source humanoid robot arm, built on open hardware and the ROS2 software stack focused on cross-disciplinary engineering practice</p>
+              <div class="products-preview-tags">
+                <span>Open-source Arm</span>
+                <span>ROS2</span>
+              </div>
+            </article>
+            <article class="products-preview-card">
+              <div class="products-preview-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+                  <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
+                  <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+                  <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+                </svg>
+              </div>
+              <h3>Dexterous Hands</h3>
+              <p>Partnering with LinkerHand's full product line, covering a 6C42 DOF multi-model gradient</p>
+              <div class="products-preview-tags">
+                <span>LinkerHand</span>
+                <span>Multi-DOF</span>
+              </div>
+            </article>
+            <article class="products-preview-card">
+              <div class="products-preview-icon"></div>
+              <h3>Multi-purpose Training Platform</h3>
+              <p>An AI multi-purpose training platform based on Raspberry Pi 5, integrating machine vision and voice processing</p>
+              <div class="products-preview-tags">
+                <span>Raspberry Pi 5</span>
+                <span>AI Training</span>
+              </div>
+            </article>
+            <article class="products-preview-card">
+              <div class="products-preview-icon"></div>
+              <h3>AI Course Platform</h3>
+              <p>Provides an AI course platform, smart training kits, and supporting teaching resources as a complete solution</p>
+              <div class="products-preview-tags">
+                <span>AI Courses</span>
+                <span>Smart Teaching</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Use cases ===================== -->
+      <section class="section scenarios-preview">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Use Cases</span>
+              <h2>University use cases</h2>
+              <p>Five product lines working together, covering the full university AI-education pipeline</p>
+            </div>
+          </div>
+          <div class="scenarios-preview-grid">
+            <article class="scenarios-preview-card">
+              <div class="scenarios-preview-icon"></div>
+              <h3>Robotics Lab</h3>
+              <p>Embodied AI robots + core components to build a complete robotics teaching platform. Supports ROS development, motion control, visual grasping, and more.</p>
+            </article>
+            <article class="scenarios-preview-card">
+              <div class="scenarios-preview-icon"></div>
+              <h3>Embedded Training Lab</h3>
+              <p>Embedded AI training platform based on Raspberry Pi 5, integrating machine vision, voice processing, and sensor control.</p>
+            </article>
+            <article class="scenarios-preview-card">
+              <div class="scenarios-preview-icon"></div>
+              <h3>AI Classroom Teaching</h3>
+              <p>AI course platform + smart training kit, providing a complete teaching system from foundational AI theory to project practice.</p>
+            </article>
+            <article class="scenarios-preview-card">
+              <div class="scenarios-preview-icon"></div>
+              <h3>Academic Competitions</h3>
+              <p>RoboCup standard platform + hackathon mode. Mini Pi Plus and Panthera-HT are now the official designated platforms for multiple robotics competitions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Open source ===================== -->
+      <section class="section opensource-preview">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Open Source</span>
+              <h2>WWNT Robotics open-source ecosystem</h2>
+              <p>4 public repos freely offering the underlying SDK, simulation demos, and algorithm projects  hardware fully decoupled, public/private layered</p>
+            </div>
+            <a href="opensource.html" class="text-link">View all </a>
+          </div>
+          <div class="opensource-preview-grid">
+            <article class="opensource-preview-card">
+              <div class="opensource-preview-icon"></div>
+              <h3>OpenArm_Edu</h3>
+              <p>Dual-arm collaborative arm teaching code  ROS2  VLA</p>
+              <span class="license-tag">GPL-3.0</span>
+            </article>
+            <article class="opensource-preview-card">
+              <div class="opensource-preview-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M12 2a10 10 0 0 0-3.16 19.49"></path>
+                  <path d="M12 2a10 10 0 0 1 3.16 19.49"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+              </div>
+              <h3>LinkerHand_Edu</h3>
+              <p>Dexterous hand standalone teaching SDK  simulation  teleoperation</p>
+              <span class="license-tag apache">Apache 2.0</span>
+            </article>
+            <article class="opensource-preview-card">
+              <div class="opensource-preview-icon"></div>
+              <h3>MiniPI_Plus_Edu</h3>
+              <p>20-DOF humanoid robot full-stack code  Sim2Real</p>
+              <span class="license-tag">GPL-3.0</span>
+            </article>
+            <article class="opensource-preview-card">
+              <div class="opensource-preview-icon"></div>
+              <h3>Sim_Twin_Tools</h3>
+              <p>General-purpose simulation  digital twin  Sim2Real tool library</p>
+              <span class="license-tag agpl">AGPL-3.0</span>
+            </article>
+          </div>
+          <div class="opensource-preview-footer">
+            <span>Developers worldwide can freely Clone, Fork, and Star</span>
+            <a href="https://github.com/UnitClaw" target="_blank" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CTA ===================== -->
+      <section class="section cta-band">
+        <div class="container cta-inner">
+          <div>
+            <span class="eyebrow">Ready to order?</span>
+            <h2>Need a quote or custom integration solution?</h2>
+            <p>Tell us about your use case and we'll respond within 24 hours with configuration recommendations and delivery timelines.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="mailto:Support@wwntAI.com" class="btn btn-primary btn-lg">Contact Sales</a>
+            <a href="store.html" class="btn btn-outline btn-lg">Enter Store</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    </button>
+
+    <script src="js/include.js?v=20260901"></script>
+    <script src="js/mobile.js?v=20260901"></script>
+    <script src="js/data.js?v=20260901"></script>
+
+    <!-- ============ Carousel JS ============ -->
+    <script src="js/hero-carousel.js?v=20260901"></script>
+
+    <!-- ============ Homepage product rendering + effects JS ============ -->
+    <script src="js/homepage.js?v=20260901"></script>
+    
+  </body>
+</html>
+

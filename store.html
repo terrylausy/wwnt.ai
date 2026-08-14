@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse the WWNT Robotics bionic robotics store  search, filter, and sort bionic hands, arms, legs, and sensing kits." />
+    <title>Store  WWNT Robotics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=20260901" />
+    <link rel="stylesheet" href="css/mobile.css?v=20260901" />
+  </head>
+  <body data-page="store">
+    <div id="site-header"></div>
+
+    <main class="store-page">
+      <section class="page-hero compact">
+        <div class="container">
+          <span class="eyebrow">Hardware Catalog</span>
+          <h1>Bionic Robotics Store</h1>
+          <p>Transparent pricing, fast delivery  filter by category and brand, or search directly.</p>
+        </div>
+      </section>
+
+      <section class="section store-toolbar-section">
+        <div class="container">
+          <div class="store-toolbar glass-panel">
+            <div class="search-box">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8" />
+                <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Search product name, brand, category..."
+                autocomplete="off"
+                aria-label="Search products"
+              />
+            </div>
+            <div class="filter-row">
+              <label class="field">
+                <span>Category</span>
+                <select id="filter-category" aria-label="Filter by category"></select>
+              </label>
+              <label class="field">
+                <span>Brand</span>
+                <select id="filter-brand" aria-label="Filter by brand"></select>
+              </label>
+              <label class="field">
+                <span>Sort</span>
+                <select id="sort-select" aria-label="Sort by"></select>
+              </label>
+            </div>
+          </div>
+
+          <div class="store-meta">
+            <div class="popular-tags">
+              <span>Trending:</span>
+              <button type="button" class="tag-btn" data-popular="bionic hand">Bionic Hand</button>
+              <button type="button" class="tag-btn" data-popular="tactile">Tactile</button>
+              <button type="button" class="tag-btn" data-popular="ROS">ROS</button>
+            </div>
+            <div class="store-meta-right">
+              <span id="result-count">0 products</span>
+              <button type="button" id="clear-filters" class="text-link" hidden>Clear filters</button>
+            </div>
+          </div>
+
+          <div id="active-filters" class="active-filters" hidden></div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
+          <div id="product-grid" class="product-grid"></div>
+          <div id="empty-state" class="empty-state" hidden>
+            <h3>No matching products found</h3>
+            <p>Try adjusting your search terms or clearing the filters.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section checkout-note">
+        <div class="container note-grid">
+          <article>
+            <h3>Every order includes</h3>
+            <ul>
+              <li>Standard warranty and fast technical support</li>
+              <li>GitHub example projects and SDK docs</li>
+              <li><a href="https://jtour.ai" target="_blank" rel="noopener">Shipment tracking </a></li>
+            </ul>
+          </article>
+          <article class="note-highlight">
+            <h3>Need an enterprise quote?</h3>
+            <p>Bulk orders, custom integration, and rental solutions  contact our sales team directly.</p>
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    </button>
+
+    <script src="js/include.js?v=20260901"></script>
+    <script src="js/mobile.js?v=20260901"></script>
+    <script src="js/data.js?v=20260901"></script>
+    <script src="js/store.js?v=20260901"></script>
+  </body>
+</html>

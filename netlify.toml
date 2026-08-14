@@ -1,0 +1,19 @@
+[build]
+  publish = "."
+  command = ""
+
+[functions]
+  directory = "netlify/functions"
+
+[forms]
+  [[forms.submissions]]
+    form_name = "contact"
+    email = "Support@wwntAI.com"
+    subject = "新的联系留言 | WWNT Robotics"
+    reply_to = "{email}"
+  
+  [[forms.submissions]]
+    form_name = "inquiry"
+    email = "Support@wwntAI.com"
+    subject = "新的采购询价 | WWNT Robotics"
+    reply_to = "{email}"

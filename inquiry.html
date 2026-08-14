@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WWNT Robotics product inquiry and procurement quote request." />
+    <title>Product Inquiry  WWNT Robotics</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=20260901" />
+    <link rel="stylesheet" href="css/mobile.css?v=20260901" />
+  </head>
+
+  <body data-page="inquiry">
+    <div id="site-header"></div>
+
+    <main>
+      <section class="page-hero compact">
+        <div class="container">
+          <span class="eyebrow">Inquiry</span>
+          <h1>Product Inquiry & Quote Request</h1>
+          <p>Fill in your procurement requirements and we will provide a quote and delivery plan within 24 hours.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container" style="max-width: 800px;">
+          <div class="glass-panel detail-panel">
+            <div class="panel-head">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <h2>Submit Your Requirements</h2>
+            </div>
+
+            <form id="inquiry-form" name="inquiry" method="POST" netlify action="/thanks" style="display: grid; gap: 1.2rem;">
+              <input type="hidden" name="form-name" value="inquiry" />
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <label class="field">
+                  <span>Name <span style="color: var(--red-500);">*</span></span>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Enter your name"
+                    style="
+                      width: 100%;
+                      padding: 0.75rem 1rem;
+                      border-radius: var(--radius-sm);
+                      border: 1px solid var(--gray-200);
+                      font: inherit;
+                    "
+                  />
+                </label>
+                <label class="field">
+                  <span>Phone <span style="color: var(--red-500);">*</span></span>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    placeholder="Enter your phone number"
+                    style="
+                      width: 100%;
+                      padding: 0.75rem 1rem;
+                      border-radius: var(--radius-sm);
+                      border: 1px solid var(--gray-200);
+                      font: inherit;
+                    "
+                  />
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Email <span style="color: var(--red-500);">*</span></span>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="example@domain.com"
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid var(--gray-200);
+                    font: inherit;
+                  "
+                />
+              </label>
+
+              <label class="field">
+                <span>Company / Institution</span>
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Enter your company or institution name"
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid var(--gray-200);
+                    font: inherit;
+                  "
+                />
+              </label>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <label class="field">
+                  <span>Product <span style="color: var(--red-500);">*</span></span>
+                  <input
+                    type="text"
+                    id="product-name-input"
+                    name="product"
+                    required
+                    placeholder="Enter the product name"
+                    style="
+                      width: 100%;
+                      padding: 0.75rem 1rem;
+                      border-radius: var(--radius-sm);
+                      border: 1px solid var(--gray-200);
+                      font: inherit;
+                    "
+                  />
+                </label>
+                <label class="field">
+                  <span>Quantity <span style="color: var(--red-500);">*</span></span>
+                  <input
+                    type="number"
+                    name="quantity"
+                    min="1"
+                    required
+                    placeholder="Enter quantity"
+                    style="
+                      width: 100%;
+                      padding: 0.75rem 1rem;
+                      border-radius: var(--radius-sm);
+                      border: 1px solid var(--gray-200);
+                      font: inherit;
+                    "
+                  />
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Shipping Address <span style="color: var(--red-500);">*</span></span>
+                <input
+                  type="text"
+                  name="address"
+                  required
+                  placeholder="Enter the full shipping address"
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid var(--gray-200);
+                    font: inherit;
+                  "
+                />
+              </label>
+
+              <label class="field">
+                <span>Requirement Details <span style="color: var(--red-500);">*</span></span>
+                <textarea
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="Describe your use case, technical requirements, or special needs..."
+                  style="
+                    width: 100%;
+                    padding: 0.75rem 1rem;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid var(--gray-200);
+                    font: inherit;
+                    resize: vertical;
+                  "
+                ></textarea>
+              </label>
+
+              <button type="submit" class="btn btn-primary" style="justify-self: start;">
+                Submit Inquiry
+              </button>
+            </form>
+
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--gray-400);">
+              * Required fields. After submission, we will contact you by phone or email. Your information is used only for business communication.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    </button>
+
+    <script src="js/include.js?v=20260901"></script>
+    <script src="js/mobile.js?v=20260901"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const productName = params.get("product");
+        const productInput = document.getElementById("product-name-input");
+
+        if (productName) {
+          productInput.value = productName;
+        }
+
+        const form = document.getElementById("inquiry-form");
+        const submitBtn = form.querySelector('button[type="submit"]');
+
+        form?.addEventListener("submit", (e) => {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Submitting...";
+        });
+      });
+    </script>
+  </body>
+</html>
