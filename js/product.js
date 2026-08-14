@@ -72,7 +72,7 @@ function renderProductPage() {
 
   if (title) title.textContent = product.name;
   if (tagline) tagline.textContent = product.tagline;
-  if (price) price.textContent = formatPrice(product.price);
+  if (price) price.textContent = formatPrice(product.price, product.currency, product.priceNote);
   if (description) description.textContent = product.description;
   if (categoryLabel) categoryLabel.textContent = CATEGORIES[product.category];
   if (brandLabel) brandLabel.textContent = product.brand;

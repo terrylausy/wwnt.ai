@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 class="product-title">${p.name}</h3>
             <p class="product-desc">${(p.tagline || p.description).substring(0, 60)}...</p>
             <div class="product-footer">
-              <span class="price-current">${window.formatPrice(p.price)}</span>
+              <span class="price-current">${window.formatPrice(p.price, p.currency, p.priceNote)}</span>
               ${p.originalPrice ? `<span class="price-discount">-${Math.round((1 - p.price / p.originalPrice) * 100)}%</span>` : ''}
             </div>
           </div>

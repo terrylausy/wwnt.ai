@@ -1,4 +1,4 @@
-﻿/**
+﻿﻿/**
  * 加载 partials/header.html 与 partials/footer.html 并注入到页面。
  * 各页面在 <body> 上设置 data-page="home|store" 以高亮当前导航。
  * 需通过本地静态服务器访问（file:// 下 fetch 不可用）。
@@ -7,7 +7,7 @@ async function loadPartial(url, targetId) {
   const target = document.getElementById(targetId);
   if (!target) return;
 
-  const response = await fetch(url + "?v=20260840");
+  const response = await fetch(url + "?v=20260906");
   if (!response.ok) {
     throw new Error(`Failed to load ${url}: ${response.status}`);
   }
@@ -77,25 +77,6 @@ function setupHelpDropdown() {
       const open = dd.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
-  });
-
-  /* ---- AI Live Chat trigger (desktop dropdown + mobile sidebar) ---- */
-  document.addEventListener("click", (e) => {
-    const btn = e.target.closest && e.target.closest('[data-action="open-chat"]');
-    if (!btn) return;
-    e.preventDefault();
-
-    // Close desktop dropdown
-    if (desktopDropdown) desktopDropdown.classList.remove("is-open");
-
-    // Close mobile sidebar if open
-    if (window.__mobileMenu && window.__mobileMenu.close) {
-      window.__mobileMenu.close();
-    }
-
-    // Open the chat widget (event + global fallback)
-    document.dispatchEvent(new CustomEvent("wwnt:chat:open"));
-    if (typeof window.wwntOpenChat === "function") window.wwntOpenChat();
   });
 }
 
@@ -184,14 +165,6 @@ async function includeLayout() {
   setupHelpDropdown();
   setupScrollEffects();
   document.dispatchEvent(new CustomEvent("layout:ready"));
-
-  // Auto-inject AI Live Chat widget on all pages (loaded once)
-  if (!document.getElementById("wwnt-chat-widget")) {
-    const s = document.createElement("script");
-    s.src = "js/chat.js?v=20260840";
-    s.defer = true;
-    document.body.appendChild(s);
-  }
 }
 
 includeLayout().catch((error) => {

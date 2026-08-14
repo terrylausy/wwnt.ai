@@ -56,7 +56,7 @@ const PRODUCTS = [
     badgeType: "badge-new",
     tagline: "12 DOF · 50 cm tall · 9.7 kg · RK3588 CPU",
     description: "Entry-level bipedal gait experimental platform. Stands 50 cm tall when powered on, weighs 9.7 kg including battery. 12 full-body degrees of freedom with max joint torque of 21 Nm, equipped with 12 HTDW-5036-02-DNE motors. CE and FCC certified. Features OLED status display, CAN FD communication (1000 Hz), and pre-deployed ROS1 development environment with open SDK.",
-    images: ["image/hightorque_wrc2025_p1_img1.jpeg"],
+    images: ["image/Mini Pi Bipedal Robot.png"],
     specs: [
       { label: "Height", value: "50 cm" },
       { label: "Weight", value: "9.7 kg (with battery)" },
@@ -88,7 +88,7 @@ const PRODUCTS = [
     badgeType: "badge-hot",
     tagline: "12 DOF · NVIDIA Jetson Orin NX · 50 cm · Enhanced AI Computing",
     description: "Upgraded Mini Pi with NVIDIA Jetson Orin NX CPU for enhanced AI computing. Same 12 DOF bipedal platform with 50 cm height and 9.7 kg weight. Integrated ROS1 environment, open SDK, MIT 5-parameter adaptive controller, and Humanoid Gym training framework support.",
-    images: ["image/hightorque_wrc2025_p2_img1.jpeg"],
+    images: ["image/Mini Pi Bipedal Robot.png"],
     specs: [
       { label: "Height", value: "50 cm" },
       { label: "Weight", value: "9.7 kg (with battery)" },
@@ -149,7 +149,7 @@ const PRODUCTS = [
     badgeType: "badge-hot",
     tagline: "22 DOF · 68 cm · NVIDIA Jetson Orin NX · Full bionic dual-arm platform",
     description: "Pro version of Mini Pi Plus with NVIDIA Jetson Orin NX for advanced AI computing. Bionic dual-arm design, 22 DOF, supports static standing, gait walking, dancing, dual-arm manipulation, and more. Pre-deployed development environment, ready out of the box.",
-    images: ["image/mini-pi-plus-performance.png"],
+    images: ["image/Mini Pi Plus Pro Humanoid Robot.png"],
     specs: [
       { label: "Height", value: "68 cm" },
       { label: "Weight", value: "15.15 kg (with battery)" },
@@ -183,7 +183,7 @@ const PRODUCTS = [
     badgeType: "badge-hot",
     tagline: "6-Axis · Upright mounting · High-precision servo joints",
     description: "6-axis robotic arm with upright mounting structure. Designed for research, education, and light industrial applications. High-precision servo joints with dual absolute encoders, CAN FD communication, and open SDK support.",
-    images: ["image/OIP.webp"],
+    images: ["image/Panthera-HT 6-Axis Robotic Arm 1.png"],
     specs: [
       { label: "Axes", value: "6-Axis" },
       { label: "Mounting", value: "Upright" },
@@ -747,8 +747,7 @@ const PRODUCTS = [
     name: "Linker Hand O6",
     category: "dexterous-hand",
     brand: "LinkerBot",
-    price: 6666,
-    originalPrice: 8000,
+    price: 999,
     currency: "USD",
     priceNote: "Ex-work Price",
     badge: "World's Lightest",
@@ -781,7 +780,7 @@ const PRODUCTS = [
     name: "Linker Hand L6",
     category: "dexterous-hand",
     brand: "LinkerBot",
-    price: null,
+    price: 2999,
     currency: "USD",
     priceNote: "Ex-work Price",
     badge: "Entry Model",
@@ -817,7 +816,7 @@ const PRODUCTS = [
     name: "Linker Hand L20 Lite",
     category: "dexterous-hand",
     brand: "LinkerBot",
-    price: null,
+    price: 2999,
     currency: "USD",
     priceNote: "Ex-work Price",
     badge: "Best Value",
@@ -853,7 +852,7 @@ const PRODUCTS = [
     name: "Linker Hand O20",
     category: "dexterous-hand",
     brand: "LinkerBot",
-    price: null,
+    price: 2999,
     currency: "USD",
     priceNote: "Ex-work Price",
     badge: "Industrial Grade",
@@ -890,7 +889,7 @@ const PRODUCTS = [
     name: "Linker Hand L20",
     category: "dexterous-hand",
     brand: "LinkerBot",
-    price: null,
+    price: 7499,
     currency: "USD",
     priceNote: "Ex-work Price",
     badge: "Research Flagship",
@@ -969,7 +968,7 @@ const PRODUCTS = [
     name: "Linker Hand L30",
     category: "dexterous-hand",
     brand: "LinkerBot",
-    price: null,
+    price: 14999,
     currency: "USD",
     priceNote: "Ex-work Price",
     badge: "Flagship",
@@ -1009,7 +1008,7 @@ const PRODUCTS = [
     name: "Linker EG Exoskeleton Glove",
     category: "teleoperation",
     brand: "LinkerBot",
-    price: null,
+    price: 1499,
     currency: "USD",
     priceNote: "Ex-work Price",
     badge: "Teleoperation",
@@ -1041,7 +1040,7 @@ const PRODUCTS = [
     name: "Linker TA Teleoperated Arm",
     category: "teleoperation",
     brand: "LinkerBot",
-    price: null,
+    price: 1499,
     currency: "USD",
     priceNote: "Ex-work Price",
     badge: "Teleoperation",
@@ -1075,7 +1074,7 @@ const PRODUCTS = [
     name: "Linker Arm A7 Robotic Arm",
     category: "robot-arm",
     brand: "LinkerBot",
-    price: null,
+    price: 4499,
     currency: "USD",
     priceNote: "Ex-work Price",
     badge: "Lightweight Collaborative Arm",
@@ -1113,12 +1112,7 @@ function getProductById(id) {
 
 function formatPrice(price, currency, priceNote) {
   if (!price || price <= 0) return "Price on Inquiry";
-  var formatted;
-  if (currency === "USD") {
-    formatted = "$" + price.toLocaleString("en-US");
-  } else {
-    formatted = "$" + price.toLocaleString("en-US");
-  }
+  var formatted = "$" + price.toLocaleString("en-US");
   if (priceNote) {
     formatted += " (" + priceNote + ")";
   }

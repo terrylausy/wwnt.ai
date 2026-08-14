@@ -21,7 +21,7 @@ function productCardHtml(product) {
           <h3>${product.name}</h3>
           <p>${product.tagline}</p>
           <div class="product-card-footer">
-            <strong class="price">${formatPrice(product.price)}</strong>
+            <strong class="price">${formatPrice(product.price, product.currency, product.priceNote)}</strong>
             ${stockLabel}
           </div>
         </div>
