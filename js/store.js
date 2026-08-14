@@ -1,7 +1,7 @@
 function productCardHtml(product) {
   const stockLabel = product.inStock
-    ? `<span class="stock in-stock">In Stock</span>`
-    : `<span class="stock out-of-stock">Pre-order</span>`;
+    ? `<span class="stock in-stock">In Stock – Ready to Ship</span>`
+    : `<span class="stock out-of-stock">Pre-Order</span>`;
   const badge = product.badge
     ? `<span class="product-badge">${product.badge}</span>`
     : "";
@@ -141,7 +141,7 @@ function initStorePage() {
   function render() {
     const list = filterProducts(state);
     if (resultCount) {
-      resultCount.textContent = `${list.length} product${list.length === 1 ? "" : "s"}`;
+      resultCount.textContent = `Total: ${list.length} Product${list.length === 1 ? "" : "s"}`;
     }
     renderActiveFilters(state);
 

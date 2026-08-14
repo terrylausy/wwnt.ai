@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,8 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=20260901" />
-    <link rel="stylesheet" href="css/mobile.css?v=20260901" />
+    <link rel="stylesheet" href="css/styles.css?v=20260912" />
+    <link rel="stylesheet" href="css/mobile.css?v=20260912" />
   </head>
 
   <body data-page="help">
@@ -53,7 +53,7 @@
                 <h2>Office & Delivery Center</h2>
               </div>
               <p>
-                Zhangjiang Robot Valley, Pudong New Area, Shanghai<br />
+                Dongguan & Shenzhen, China<br />
                 Weekdays 9:30 C 18:30 (on-site visits by appointment)
               </p>
             </div>
@@ -110,8 +110,9 @@
               <h2>Quick Message</h2>
             </div>
 
-            <form id="contact-form" name="contact" method="POST" netlify action="/thanks" style="display: grid; gap: 1rem;">
-              <input type="hidden" name="form-name" value="contact" />
+            <form id="contact-form" name="contact" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_CONTACT_ID" style="display: grid; gap: 1rem;">
+              <input type="hidden" name="_subject" value="New Contact Message | WWNT Robotics" />
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
               <label class="field">
                 <span>Name</span>
                 <input
@@ -210,7 +211,7 @@
           <article class="note-highlight">
             <h3>Book an On-site Visit</h3>
             <p>
-              We offer scheduled visits to our Shanghai Zhangjiang office and test lab
+              We offer scheduled visits to our Dongguan and Shenzhen offices and test labs
               to experience core products such as the Synova Hand X1 and Neura Arm Pro in person.
             </p>
             <a href="mailto:Support@wwntAI.com" class="btn btn-primary">
@@ -230,17 +231,40 @@
       </svg>
     </button>
 
-    <script src="js/include.js?v=20260901"></script>
-    <script src="js/mobile.js?v=20260901"></script>
+    <script src="js/include.js?v=20260912"></script>
+    <script src="js/mobile.js?v=20260912"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const form = document.getElementById("contact-form");
         const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
 
-        form?.addEventListener("submit", (e) => {
+        form?.addEventListener("submit", async (e) => {
+          e.preventDefault();
           submitBtn.disabled = true;
           submitBtn.textContent = "Submitting...";
+
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              headers: { "Accept": "application/json" },
+              body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+              window.location.href = "/thanks.html";
+            } else {
+              alert("Failed to submit. Please try again or email us directly at Support@wwntAI.com");
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Submit Message";
+            }
+          } catch (error) {
+            alert("Network error. Please try again or email us directly at Support@wwntAI.com");
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit Message";
+          }
         });
       });
     </script>

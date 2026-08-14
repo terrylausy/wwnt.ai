@@ -3240,55 +3240,6 @@ html.mobile-active .brand-title {
 }
 
 /* ============================================================
-   Mobile: AI Live Chat Widget
-   ============================================================ */
-html.mobile-active #wwnt-chat-widget {
-  bottom: 5rem !important; /* stack above mobile .back-to-top (1.5rem + 44px ≈ 4.25rem) */
-  right: 1rem !important;
-}
-
-html.mobile-active .chat-bubble {
-  width: 54px !important;
-  height: 54px !important;
-}
-
-html.mobile-active .chat-bubble svg {
-  width: 24px !important;
-  height: 24px !important;
-}
-
-html.mobile-active .chat-window {
-  bottom: 70px !important;
-  right: 0 !important;
-  width: calc(100vw - 32px) !important;
-  max-width: calc(100vw - 32px) !important;
-  height: calc(100vh - 170px) !important;
-  max-height: calc(100vh - 170px) !important;
-  border-radius: 16px !important;
-}
-
-html.mobile-active .chat-messages {
-  padding: 12px !important;
-}
-
-html.mobile-active .chat-message {
-  max-width: 90% !important;
-}
-
-html.mobile-active .chat-message-bubble {
-  font-size: 0.84rem !important;
-}
-
-html.mobile-active .chat-quick-reply {
-  font-size: 0.74rem !important;
-  padding: 5px 10px !important;
-}
-
-html.mobile-active .chat-disclaimer {
-  font-size: 0.62rem !important;
-}
-
-/* ============================================================
    Mobile: Help Center
    ============================================================ */
 html.mobile-active .help-layout {

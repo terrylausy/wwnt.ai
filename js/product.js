@@ -78,7 +78,7 @@ function renderProductPage() {
   if (brandLabel) brandLabel.textContent = product.brand;
 
   if (stockBadge) {
-    stockBadge.textContent = product.inStock ? "In Stock" : "Pre-order";
+    stockBadge.textContent = product.inStock ? "In Stock – Ready to Ship" : "Pre-Order";
     stockBadge.className = `pill ${product.inStock ? "pill-success" : "pill-warn"}`;
   }
 

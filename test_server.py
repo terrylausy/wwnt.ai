@@ -7,12 +7,7 @@ import time
 import urllib.request
 import json
 
-import os
-
-# Read API key from env var; do NOT hardcode keys in source.
-API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
-if not API_KEY:
-    raise SystemExit("Set DEEPSEEK_API_KEY env var before running this test.")
+API_KEY = "sk-f37d4c886ea24ff48512f008b059df2a"
 
 class TestHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):

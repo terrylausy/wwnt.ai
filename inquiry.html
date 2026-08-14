@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,8 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=20260901" />
-    <link rel="stylesheet" href="css/mobile.css?v=20260901" />
+    <link rel="stylesheet" href="css/styles.css?v=20260912" />
+    <link rel="stylesheet" href="css/mobile.css?v=20260912" />
   </head>
 
   <body data-page="inquiry">
@@ -43,8 +43,9 @@
               <h2>Submit Your Requirements</h2>
             </div>
 
-            <form id="inquiry-form" name="inquiry" method="POST" netlify action="/thanks" style="display: grid; gap: 1.2rem;">
-              <input type="hidden" name="form-name" value="inquiry" />
+            <form id="inquiry-form" name="inquiry" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_INQUIRY_ID" style="display: grid; gap: 1.2rem;">
+              <input type="hidden" name="_subject" value="New Purchase Inquiry | WWNT Robotics" />
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                 <label class="field">
@@ -207,8 +208,8 @@
       </svg>
     </button>
 
-    <script src="js/include.js?v=20260901"></script>
-    <script src="js/mobile.js?v=20260901"></script>
+    <script src="js/include.js?v=20260912"></script>
+    <script src="js/mobile.js?v=20260912"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const params = new URLSearchParams(window.location.search);
@@ -222,9 +223,33 @@
         const form = document.getElementById("inquiry-form");
         const submitBtn = form.querySelector('button[type="submit"]');
 
-        form?.addEventListener("submit", (e) => {
+        form?.addEventListener("submit", async (e) => {
+          e.preventDefault();
           submitBtn.disabled = true;
           submitBtn.textContent = "Submitting...";
+
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              headers: { "Accept": "application/json" },
+              body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+              window.location.href = "/thanks.html";
+            } else {
+              alert("Failed to submit. Please try again or email us directly at Support@wwntAI.com");
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Submit Inquiry";
+            }
+          } catch (error) {
+            alert("Network error. Please try again or email us directly at Support@wwntAI.com");
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit Inquiry";
+          }
         });
       });
     </script>
