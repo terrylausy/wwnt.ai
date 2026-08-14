@@ -85,14 +85,16 @@ exports.handler = async (event) => {
     };
   }
 
-  const apiKey = process.env.DEEPSEEK_API_KEY || "sk-REDACTED-DEEPSEEK-KEY";
+  // API key MUST come from the Netlify env var (DEEPSEEK_API_KEY).
+  // Hard-coding keys is forbidden — see SECURITY.md.
+  const apiKey = process.env.DEEPSEEK_API_KEY;
   if (!apiKey) {
     return {
       statusCode: 503,
       headers,
       body: JSON.stringify({
         error: "chat_unavailable",
-        message: "AI chat is not configured. Set DEEPSEEK_API_KEY.",
+        message: "AI chat is not configured. Set DEEPSEEK_API_KEY in Netlify env vars.",
       }),
     };
   }
