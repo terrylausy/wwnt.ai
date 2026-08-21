@@ -43,12 +43,69 @@ function renderProductPage() {
       )
       .join("");
 
+    const navPrev = document.getElementById("gallery-prev");
+    const navNext = document.getElementById("gallery-next");
+    const counter = document.getElementById("gallery-counter");
+    const galleryMain = document.querySelector(".gallery-main");
+    const totalImages = product.images.length;
+    let currentIndex = 0;
+    let autoplayTimer = null;
+
+    const updateGallery = (index) => {
+      currentIndex = (index + totalImages) % totalImages;
+      mainImage.src = product.images[currentIndex];
+      thumbs.querySelectorAll(".thumb").forEach((el, i) => {
+        el.classList.toggle("is-active", i === currentIndex);
+      });
+      if (counter) counter.textContent = `${currentIndex + 1} / ${totalImages}`;
+    };
+
+    const startAutoplay = () => {
+      if (totalImages < 2) return;
+      stopAutoplay();
+      autoplayTimer = setInterval(() => updateGallery(currentIndex + 1), 3500);
+    };
+
+    const stopAutoplay = () => {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    };
+
+    if (totalImages >= 2) {
+      if (navPrev) {
+        navPrev.hidden = false;
+        navPrev.addEventListener("click", () => {
+          updateGallery(currentIndex - 1);
+          startAutoplay();
+        });
+      }
+      if (navNext) {
+        navNext.hidden = false;
+        navNext.addEventListener("click", () => {
+          updateGallery(currentIndex + 1);
+          startAutoplay();
+        });
+      }
+      if (galleryMain) {
+        galleryMain.addEventListener("mouseenter", stopAutoplay);
+        galleryMain.addEventListener("mouseleave", startAutoplay);
+      }
+      updateGallery(0);
+      startAutoplay();
+    } else {
+      if (navPrev) navPrev.hidden = true;
+      if (navNext) navNext.hidden = true;
+      if (counter) counter.textContent = "1 / 1";
+    }
+
     thumbs.addEventListener("click", (event) => {
       const btn = event.target.closest(".thumb");
       if (!btn || !mainImage) return;
-      mainImage.src = btn.dataset.src;
-      thumbs.querySelectorAll(".thumb").forEach((el) => el.classList.remove("is-active"));
-      btn.classList.add("is-active");
+      const index = Array.from(thumbs.querySelectorAll(".thumb")).indexOf(btn);
+      updateGallery(index);
+      startAutoplay();
     });
   }
 

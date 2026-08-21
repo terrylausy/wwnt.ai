@@ -56,7 +56,7 @@ const PRODUCTS = [
     badgeType: "badge-new",
     tagline: "12 DOF | 50 cm Height | 9.7 kg Weight | RK3588 Processor",
     description: "Entry-level bipedal gait experimental platform. Stands 50 cm tall when powered on, weighs 9.7 kg including battery. 12 full-body degrees of freedom with max joint torque of 21 Nm, equipped with 12 HTDW-5036-02-DNE motors. CE and FCC certified. Features OLED status display, CAN FD communication (1000 Hz), and pre-deployed ROS1 development environment with open SDK.",
-    images: ["image/Mini Pi Bipedal Robot.png"],
+    images: ["image/Mini Pi Bipedal Robot.png","image/45aa3d4da29151bcd5000d3064294212.png","image/36fa0b0b579bd9c2810ab49d2b3c8c71.png"],
     specs: [
       { label: "Height", value: "50 cm" },
       { label: "Weight", value: "9.7 kg (with battery)" },
@@ -88,7 +88,7 @@ const PRODUCTS = [
     badgeType: "badge-hot",
     tagline: "12 DOF | NVIDIA® Jetson Orin NX | 50 cm Height | Enhanced AI Computing",
     description: "Upgraded Mini Pi with NVIDIA® Jetson Orin NX Processor for enhanced AI computing. Same 12 DOF bipedal platform with 50 cm height and 9.7 kg weight. Integrated ROS1 environment, open SDK, MIT 5-parameter adaptive controller, and Humanoid Gym training framework support.",
-    images: ["image/Mini Pi Bipedal Robot.png"],
+    images: ["image/Mini Pi Bipedal Robot.png","image/45aa3d4da29151bcd5000d3064294212.png","image/36fa0b0b579bd9c2810ab49d2b3c8c71.png"],
     specs: [
       { label: "Height", value: "50 cm" },
       { label: "Weight", value: "9.7 kg (with battery)" },
@@ -120,7 +120,7 @@ const PRODUCTS = [
     badgeType: "badge-hot",
     tagline: "22 DOF | 68 cm Height | 15.15 kg Weight | 10 kg Payload | Bionic Dual-Arm Design",
     description: "Small humanoid robot experimental platform with bionic design. Stands 68 cm tall, weighs 15.15 kg with battery, 10 kg load capacity. 22 full-body DOF equipped with 12 HTDW-5036-02-DNE, 8 HTDW-4530-02-DNE and 2 HTDW-3532-02-DNE motors. Supports static standing, gait walking, dancing, and dual-arm manipulation.",
-    images: ["image/mini-pi-des-1.jpg"],
+    images: ["image/Mini Pi Plus Pro Humanoid Robot.png","image/mini-pi-des-1.jpg","image/5fb8ebc1d6fcfc556ff19ecc764cdeae.png","image/ba50d26882ccf91c5421d1eac964c75e.png"],
     specs: [
       { label: "Height", value: "68 cm" },
       { label: "Weight", value: "15.15 kg (with battery)" },
@@ -149,7 +149,7 @@ const PRODUCTS = [
     badgeType: "badge-hot",
     tagline: "22 DOF | 68 cm Height | NVIDIA® Jetson Orin NX | Full Bionic Dual-Arm Platform",
     description: "Pro version of Mini Pi Plus with NVIDIA® Jetson Orin NX for advanced AI computing. Bionic dual-arm design, 22 DOF, supports static standing, gait walking, dancing, dual-arm manipulation, and more. Pre-deployed development environment, ready out of the box.",
-    images: ["image/Mini Pi Plus Pro Humanoid Robot.png"],
+    images: ["image/Mini Pi Plus Pro Humanoid Robot.png","image/mini-pi-des-1.jpg","image/5fb8ebc1d6fcfc556ff19ecc764cdeae.png","image/ba50d26882ccf91c5421d1eac964c75e.png"],
     specs: [
       { label: "Height", value: "68 cm" },
       { label: "Weight", value: "15.15 kg (with battery)" },
@@ -1108,7 +1108,7 @@ function getProductById(id) {
 
 function formatPrice(price, currency, priceNote) {
   if (!price || price <= 0) return "Price Available Upon Request";
-  var formatted = "USD " + price.toLocaleString("en-US");
+  var formatted = "USD " + price.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   if (priceNote) {
     formatted += " " + priceNote;
   }

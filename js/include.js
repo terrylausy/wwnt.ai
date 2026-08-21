@@ -1,4 +1,4 @@
-﻿﻿/**
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿/**
  * 加载 partials/header.html 与 partials/footer.html 并注入到页面。
  * 各页面在 <body> 上设置 data-page="home|store" 以高亮当前导航。
  * 需通过本地静态服务器访问（file:// 下 fetch 不可用）。

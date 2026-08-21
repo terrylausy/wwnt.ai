@@ -2235,6 +2235,33 @@ html.mobile-active .gallery-main img {
   border-radius: 10px;
 }
 
+html.mobile-active .gallery-nav {
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+html.mobile-active .gallery-nav svg {
+  width: 14px;
+  height: 14px;
+}
+
+html.mobile-active .gallery-prev {
+  left: 6px;
+}
+
+html.mobile-active .gallery-next {
+  right: 6px;
+}
+
+html.mobile-active .gallery-counter {
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  bottom: 8px;
+}
+
 html.mobile-active .gallery-thumbs {
   display: flex;
   gap: 0.5rem;
