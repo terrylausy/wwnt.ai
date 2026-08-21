@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,30 +14,146 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=20260912" />
-    <link rel="stylesheet" href="css/mobile.css?v=20260912" />
+    <link rel="stylesheet" href="css/styles.css?v=20260922" />
+    <link rel="stylesheet" href="css/mobile.css?v=20260922" />
   </head>
   <body data-page="about">
     <div id="site-header"></div>
 
     <main>
-      <section class="about-hero">
-        <div class="about-hero-bg" aria-hidden="true"></div>
-        <div class="about-hero-overlay"></div>
-        <div class="container about-hero-content">
-          <span class="eyebrow" style="color: rgba(191,219,254,.9);">About WWNT Robotics</span>
-          <h1>
-            <span class="text-gradient">Mimic Nature, Forge Power</span>
-          </h1>
-          <p class="about-hero-sub">
-            Industry-education integration for AI robotics one-stop teaching, competitions, and research
-          </p>
-          <div class="about-hero-meta">
-            <span class="pill pill-soft">Embodied Intelligence</span>
-            <span class="pill pill-soft">Open-Source Driven</span>
-            <span class="pill pill-soft">Industry-Education Integration</span>
+      <!-- ===================== About Hero Carousel ===================== -->
+      <section class="hero-banner page-hero" id="hero-banner">
+        <!-- Slides -->
+        <div class="hero-slides" id="hero-slides">
+          <div
+            class="hero-slide active"
+            style="background-image: url('image/57dbab57ddc67461af006909205956e6.png')"
+          >
+            <div class="hero-overlay"></div>
+          </div>
+
+          <div
+            class="hero-slide"
+            style="background-image: url('image/38f3cab6589476b34c8355d6f31eafbe.png')"
+          >
+            <div class="hero-overlay"></div>
+          </div>
+
+          <div
+            class="hero-slide"
+            style="background-image: url('image/cdeb5359fa2b490479b01905829016a2.png')"
+          >
+            <div class="hero-overlay"></div>
+          </div>
+
+          <div
+            class="hero-slide"
+            style="background-image: url('image/fee0215a898ede411df7c09d003fc15a.png')"
+          >
+            <div class="hero-overlay"></div>
           </div>
         </div>
+
+        <!-- Particle decoration -->
+        <div class="hero-particles" id="hero-particles">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <!-- Cursor glow -->
+        <div class="hero-cursor-glow" id="cursor-glow"></div>
+
+        <!-- Left arrow -->
+        <button class="carousel-btn prev" id="carousel-prev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+
+        <!-- Right arrow -->
+        <button class="carousel-btn next" id="carousel-next" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 6 15 12 9 18" />
+          </svg>
+        </button>
+
+        <!-- Carousel content -->
+        <div class="hero-content" id="hero-content">
+          <span class="slide-eyebrow">ABOUT WWNT</span>
+          <h1><span class="text-gradient">Mimic Nature,</span><br />Forge Power</h1>
+          <span class="artistic-subtitle">Industry-education integration for AI robotics</span>
+          <p>
+            Deeply engaged in embodied intelligence + AI education since 2021.
+            Serving universities and enterprises worldwide with open-source driven, full-chain empowerment.
+          </p>
+          <div class="slide-tech-badges">
+            <span class="tech-badge">Embodied AI</span>
+            <span class="tech-badge">Open-Source</span>
+            <span class="tech-badge">Industry-Education</span>
+          </div>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg">Contact Us</a>
+            <a href="store.html" class="btn btn-ghost btn-lg">Browse Products</a>
+          </div>
+        </div>
+
+        <!-- Bottom dots -->
+        <div class="hero-slide-dots" id="hero-dots">
+          <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+          <button class="dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="dot" data-index="2" aria-label="Slide 3"></button>
+          <button class="dot" data-index="3" aria-label="Slide 4"></button>
+        </div>
+
+        <!-- Carousel frame data -->
+        <script type="application/json" id="slide-data">
+          [
+            {
+              "eyebrow": "EMBODIED INTELLIGENCE",
+              "title": "<span class='text-gradient'>Mimic Nature,</span><br>Forge Power",
+              "artistic": "Humanoid robots · Bionic manipulation · AI education",
+              "desc": "From Mini Pi bipedal platforms to dexterous hands — building the full spectrum of embodied AI for university labs, research, and competitions.",
+              "badges": [
+                { "label": "Embodied AI" },
+                { "label": "100+ Universities" },
+                { "label": "Since 2021" }
+              ]
+            },
+            {
+              "eyebrow": "DEXTEROUS MANIPULATION",
+              "title": "LinkerHand<br><span class='text-gradient'>Full Lineup</span>",
+              "artistic": "6 to 21 DOF · 370g to 1216g · Tactile perception",
+              "desc": "Global strategic partnership with LinkerBot. From the ultra-light O6 (370g) to flagship L30 tendon-driven hand — covering research, education, and industry.",
+              "badges": [
+                { "label": "LinkerBot" },
+                { "label": "6-21 DOF" },
+                { "label": "Tactile Sensors" }
+              ]
+            },
+            {
+              "eyebrow": "OPEN-SOURCE ARM",
+              "title": "OpenArm &<br><span class='text-gradient'>Panthera-HT</span>",
+              "artistic": "6 to 7 DOF · ROS2 native · University custom branding",
+              "desc": "Fully open-source robotic arms with ROS2 stack and MoveIt2 motion planning. Supporting cross-disciplinary engineering practice and lab customization.",
+              "badges": [
+                { "label": "HighTorque" },
+                { "label": "ROS 2" },
+                { "label": "Open Source" }
+              ]
+            },
+            {
+              "eyebrow": "EDUCATION EMPOWERMENT",
+              "title": "One-Stop<br><span class='text-gradient'>AI Robotics Education</span>",
+              "artistic": "Courses · Competitions · Research · Lab building",
+              "desc": "From classroom teaching to RoboCup competitions, from embedded training to dual-arm collaborative assembly — full-chain empowerment for universities.",
+              "badges": [
+                { "label": "Courses" },
+                { "label": "Competitions" },
+                { "label": "Lab Build" }
+              ]
+            }
+          ]
+        </script>
       </section>
 
       <section class="section company-intro">
@@ -98,13 +214,13 @@
               <div class="capability-icon"></div>
               <h3>University Deployment Experience</h3>
               <p>Benchmark case at Guangzhou Huaqiao, aligned with teaching syllabi and assessments, rich lab-building experience</p>
-              <a href="customize.html" class="text-link">Custom solutions</a>
+              <a href="contact.html" class="text-link">Custom solutions</a>
             </article>
             <article class="capability-card">
               <div class="capability-icon"></div>
               <h3>Empowering National Competition Wins</h3>
               <p>Hands-on experience with RoboCup and other competitions, coaching multiple universities to success</p>
-              <a href="customize.html" class="text-link">Competition support </a>
+              <a href="contact.html" class="text-link">Competition support </a>
             </article>
             <article class="capability-card">
               <div class="capability-icon"></div>
@@ -127,8 +243,8 @@
           <div class="section-head">
             <div>
               <span class="eyebrow">Product Evolution</span>
-              <h2>Product evolution timeline</h2>
-              <p>Serving universities  from smart-manufacturing hardware to a full-stack embodied-intelligence education platform</p>
+              <h2>Product Evolution Timeline</h2>
+              <p>Serving universities — from smart-manufacturing hardware to a full-stack embodied-intelligence education platform</p>
             </div>
           </div>
           <div class="timeline-orange">
@@ -138,9 +254,54 @@
             <div class="timeline-item">
               <div class="timeline-marker"></div>
               <div class="timeline-content">
-                <span class="timeline-year">2021</span>
-                <h4>Smart Manufacturing</h4>
-                <p>Embedded training bench / robot-arm kit</p>
+                <span class="timeline-year">2021.06</span>
+                <h4>Company Founded</h4>
+                <p>Embedded training bench launched — entering the university robotics education market</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-year">2022.06</span>
+                <h4>Dual-Arm Collaborative Bench</h4>
+                <p>Independently developed dual-arm collaborative bench — entering university labs</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-year">2023.03</span>
+                <h4>Smart Manufacturing Platform</h4>
+                <p>Smart manufacturing training platform released — adopted by vocational colleges nationwide</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-year">2023.12</span>
+                <h4>AIoT Benchmark Platform</h4>
+                <p>AIoT benchmarking platform + dual-arm bench mass production — scaled deployment</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-year">2024.09</span>
+                <h4>Humanoid Robot Simulation</h4>
+                <p>Humanoid robot simulation platform launched — full-stack embodied AI simulation toolchain</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <span class="timeline-year">2025.05</span>
+                <h4>Course System & AI Agent</h4>
+                <p>LessonPrep AI course agent released — intelligent teaching assistant for robotics courses</p>
               </div>
             </div>
 
@@ -149,7 +310,7 @@
               <div class="timeline-content">
                 <span class="timeline-year">2025.10</span>
                 <h4>AI Training Kit</h4>
-                <p>Multi-purpose integrated training kit in mass production</p>
+                <p>Multi-purpose integrated AI training kit — mass production, university-wide deployment</p>
               </div>
             </div>
 
@@ -157,8 +318,8 @@
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <span class="timeline-year">2026.01</span>
-                <h4>Course System</h4>
-                <p>LessonPrep  AI course agent</p>
+                <h4>OpenSource Dual-Arm</h4>
+                <p>Open-source dual-arm platform released — ROS2-native, full customization support</p>
               </div>
             </div>
 
@@ -166,8 +327,8 @@
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <span class="timeline-year">2026.03</span>
-                <h4>Embodied Robots</h4>
-                <p>National strategic partnership with HighTorque Robotics</p>
+                <h4>HighTorque Partnership</h4>
+                <p>National strategic partnership with HighTorque Robotics — embodied humanoid robot lineup</p>
               </div>
             </div>
 
@@ -175,22 +336,22 @@
               <div class="timeline-marker"></div>
               <div class="timeline-content">
                 <span class="timeline-year">2026.06</span>
-                <h4>Dexterous Hand</h4>
-                <p>Global strategic partnership with LinkerBot</p>
+                <h4>LinkerBot Partnership</h4>
+                <p>Global strategic partnership with LinkerBot — full dexterous hand product lineup</p>
               </div>
             </div>
 
             <div class="timeline-item timeline-current">
               <div class="timeline-marker"></div>
               <div class="timeline-content">
-                <span class="timeline-year">NOW</span>
-                <h4>OpenArm</h4>
-                <p>Open-source dual arm exclusive manufacturing</p>
+                <span class="timeline-year">2026.08</span>
+                <h4>OpenVern Release</h4>
+                <p>OpenVern open-source platform released — full-chain empowerment for university AI + robotics</p>
               </div>
             </div>
           </div>
           <div class="timeline-footer">
-            <p>Our product matrix keeps expanding, serving the full lifecycle of university AI + robotics programs</p>
+            <p>Our product matrix keeps expanding — serving the full lifecycle of university AI + robotics programs</p>
           </div>
         </div>
       </section>
@@ -341,7 +502,8 @@
       </svg>
     </button>
 
-    <script src="js/include.js?v=20260912"></script>
-    <script src="js/mobile.js?v=20260912"></script>
+    <script src="js/include.js?v=20260922"></script>
+    <script src="js/mobile.js?v=20260922"></script>
+    <script src="js/hero-carousel.js?v=20260922"></script>
   </body>
 </html>
