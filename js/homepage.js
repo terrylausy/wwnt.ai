@@ -50,12 +50,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ✅ Filter logic (aligned with data.js)
-  const hotProducts = PRODUCTS
-    .filter(p => p.featured && p.badgeType === 'badge-hot')
-    .slice(0, 3);
+  const openDuckMini = PRODUCTS.find(p => p.id === 'wwnt-openduck-mini');
+
+  // Trending: OpenDuck Mini pinned first, then featured hot products
+  const hotProducts = [
+    ...(openDuckMini ? [openDuckMini] : []),
+    ...PRODUCTS.filter(p => p.featured && p.badgeType === 'badge-hot'),
+  ].filter((p, i, arr) => arr.findIndex(x => x.id === p.id) === i).slice(0, 3);
 
   const featuredProducts = PRODUCTS
-    .filter(p => p.featured && p.badgeType !== 'badge-hot')
+    .filter(p => p.featured && p.badgeType !== 'badge-hot' && p.id !== 'wwnt-openduck-mini')
     .slice(0, 3);
 
   const dealProducts = PRODUCTS
