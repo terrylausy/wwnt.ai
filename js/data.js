@@ -1,7 +1,8 @@
 /**
- * BionicHub 产品数据库 — 仅高擎动力 (HighTorque) + 灵心巧手 (LinkerBot)
+ * BionicHub 产品数据库 — 万物拟态 (WWNT) + 高擎动力 (HighTorque) + 灵心巧手 (LinkerBot)
  *
  * 数据来源：
+ *   - WWNT 自研 OpenDuck Mini（www.wwntai.com/products/openduck-mini.html）
  *   - 高擎动力招标规格及报价表 (USD) — Ex-Works Price
  *   - 灵心巧手产品手册 20260513 英文版 — Ex-Works Price
  *   - 原 data.js 中灵心巧手的历史价格
@@ -27,6 +28,7 @@ const CATEGORIES = {
 
 // ========== Brands ==========
 const BRANDS = {
+  "WWNT": "WWNT Robotics",
   "HighTorque": "HighTorque® Robotics",
   "LinkerBot": "LinkerBot",
 };
@@ -41,6 +43,46 @@ const SORT_OPTIONS = {
 
 // ========== 产品数据 ==========
 const PRODUCTS = [
+  // ============================================================
+  // 〇、万物拟态 (WWNT) — OpenDuck Mini 开源双足机器人
+  // ============================================================
+  {
+    id: "wwnt-openduck-mini",
+    name: "OpenDuck Mini Bipedal Robot",
+    category: "humanoid-robot",
+    brand: "WWNT",
+    price: 369,
+    currency: "USD",
+    priceNote: "Ex-Works",
+    badge: "Fully Open Source",
+    badgeType: "badge-new",
+    tagline: "14+2 DOF | 42 cm Height | 3D-Printed | RL Walking on Raspberry Pi",
+    description: "Open-source 3D-printed bipedal robot inspired by Disney BDX. Standing about 42 cm tall with 14+2 degrees of freedom, it walks out-of-the-box with a pre-trained reinforcement learning policy running on a Raspberry Pi Zero 2W. All 35+ 3D-printed structural parts (PLA/TPU), mechanical CAD, BOM, onboard software, MuJoCo simulation and RL policies are fully open source under Apache-2.0 (commercial use allowed). Shell color, coating, head styling and functions are deeply customizable — ideal for campus IP robots, robotics courses, reinforcement learning teaching, and Sim2Real research.",
+    images: [
+      "image/openduck-mini-hero.jpg",
+      "image/openduck-mini-gallery-1.jpg",
+      "image/openduck-mini-gallery-2.jpg",
+    ],
+    specs: [
+      { label: "Height", value: "Approx. 42 cm (legs extended)" },
+      { label: "Configuration", value: "Bipedal robot (inspired by Disney BDX)" },
+      { label: "Degrees of Freedom", value: "14 + 2 (antennae)" },
+      { label: "Actuators", value: "14 × Feetech STS3215 bus servos + 2 × SG90 micro servos" },
+      { label: "Joint Layout", value: "5 DOF per leg (hip yaw/roll/pitch, knee, ankle); head pitch/yaw/roll + neck pitch; 2 antennae" },
+      { label: "Controller", value: "Raspberry Pi Zero 2W (4× Cortex-A53 @ 1GHz, 512MB RAM)" },
+      { label: "Sensors", value: "BNO055 9-axis IMU, foot contact switches, camera, microphone" },
+      { label: "Power", value: "2S 18650 lithium battery pack (approx. 7.4V) with BMS protection" },
+      { label: "Audio / Display", value: "MAX98357A I2S amplifier + speaker; dual-eye LED + projection expressions" },
+      { label: "Structure", value: "35+ 3D-printed parts (PLA structural / TPU flexible), M3 heat-set inserts and bearings" },
+      { label: "Control", value: "Xbox controller (Bluetooth): start/stop, acceleration, antennae, sound effects" },
+      { label: "RL & Simulation", value: "Pre-trained ONNX walking policy, MuJoCo simulation, imitation learning pipeline" },
+      { label: "Open Source License", value: "Apache-2.0 (commercial use allowed)" },
+    ],
+    github: "https://github.com/UnitClaw",
+    contact: { email: "Support@wwntAI.com", phone: "+1-662-681-4342", whatsapp: "+86-189-2582-6701" },
+    inStock: true,
+    featured: true,
+  },
   // ============================================================
   // 一、高擎动力 — 人形机器人 (Mini Pi 系列)
   // ============================================================
