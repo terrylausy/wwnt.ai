@@ -1150,7 +1150,7 @@ function getProductById(id) {
 
 function formatPrice(price, currency, priceNote) {
   if (!price || price <= 0) return "Price Available Upon Request";
-  var formatted = "USD " + price.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var formatted = "$" + price.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   if (priceNote) {
     formatted += " " + priceNote;
   }
