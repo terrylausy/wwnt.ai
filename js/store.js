@@ -1,6 +1,6 @@
 function productCardHtml(product) {
   const stockLabel = product.inStock
-    ? `<span class="stock in-stock">In Stock – Ready to Ship</span>`
+    ? `<span class="stock in-stock">10–20 Days Production</span>`
     : `<span class="stock out-of-stock">Pre-Order</span>`;
   const badge = product.badge
     ? `<span class="product-badge">${product.badge}</span>`
