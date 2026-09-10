@@ -51,7 +51,7 @@ const PRODUCTS = [
     name: "OpenDuck Mini Bipedal Robot",
     category: "humanoid-robot",
     brand: "WWNT",
-    price: 369,
+    price: 439,
     currency: "USD",
     priceNote: "Ex-Works",
     badge: "Fully Open Source",
