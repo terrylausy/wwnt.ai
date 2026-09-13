@@ -95,7 +95,7 @@ const PRODUCTS = [
     badgeType: "badge-new",
     tagline: "7 DOF | 633 mm Reach | 4.1/6 kg Payload | ROS2 Native | Fully Open Source",
     description: "Fully open-source humanoid robotic arm built on open hardware and the ROS2 software stack. With 7 degrees of freedom, a 633 mm reach, and 4.1 kg rated / 6 kg peak payload, OpenArm is designed for cross-disciplinary engineering practice. Complete CAD drawings, firmware, control code and simulation tools are open under the CERN Open Hardware Licence. Features bilateral force-feedback teleoperation with real-time gravity compensation, ROS2/BrainOS middleware support, MuJoCo and Isaac Sim compatibility, and is listed as an official data-collection device by HuggingFace's LeRobot framework. Supports Station, Strench and Heavy DIY configurations.",
-    images: ["image/openarm-1.png", "image/openarm-2.png", "image/openarm-3.png"],
+    images: ["image/openarm-hero.png", "image/openarm-1.png", "image/openarm-2.png"],
     specs: [
       { label: "Reach", value: "633 mm" },
       { label: "Degrees of Freedom", value: "7 DOF per arm" },
