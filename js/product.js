@@ -130,6 +130,31 @@ function renderProductPage() {
   if (title) title.textContent = product.name;
   if (tagline) tagline.textContent = product.tagline;
   if (price) price.textContent = formatPrice(product.price, product.currency, product.priceNote);
+
+  // 配置选择（variants）
+  const variantsEl = document.getElementById("product-variants");
+  if (variantsEl && product.variants && product.variants.length) {
+    variantsEl.hidden = false;
+    variantsEl.innerHTML = product.variants
+      .map(
+        (v, i) =>
+          `<button type="button" class="variant-btn${i === 0 ? " is-active" : ""}" data-price="${v.price}" data-label="${v.label}">
+            <span class="variant-label">${v.label}</span>
+            <strong class="variant-price">${formatPrice(v.price, product.currency, product.priceNote)}</strong>
+          </button>`
+      )
+      .join("");
+    variantsEl.querySelectorAll(".variant-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        variantsEl.querySelectorAll(".variant-btn").forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        const p = Number(btn.dataset.price);
+        if (price) price.textContent = formatPrice(p, product.currency, product.priceNote);
+        const inquiryInputEl = document.getElementById("inquiry-product");
+        if (inquiryInputEl) inquiryInputEl.value = `${product.name} (${btn.dataset.label})`;
+      });
+    });
+  }
   if (description) description.textContent = product.description;
   if (categoryLabel) categoryLabel.textContent = CATEGORIES[product.category];
   if (brandLabel) brandLabel.textContent = BRANDS[product.brand] || product.brand;
