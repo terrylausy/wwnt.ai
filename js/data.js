@@ -59,9 +59,9 @@ const PRODUCTS = [
     tagline: "14+2 DOF | 42 cm Height | 3D-Printed | RL Walking on Raspberry Pi",
     description: "Open-source 3D-printed bipedal robot inspired by Disney BDX. Standing about 42 cm tall with 14+2 degrees of freedom, it walks out-of-the-box with a pre-trained reinforcement learning policy running on a Raspberry Pi Zero 2W. All 35+ 3D-printed structural parts (PLA/TPU), mechanical CAD, BOM, onboard software, MuJoCo simulation and RL policies are fully open source under Apache-2.0 (commercial use allowed). Shell color, coating, head styling and functions are deeply customizable — ideal for campus IP robots, robotics courses, reinforcement learning teaching, and Sim2Real research.",
     images: [
-      "image/openduck-mini-hero.jpg",
-      "image/openduck-mini-gallery-1.jpg",
-      "image/openduck-mini-gallery-2.jpg",
+      "image/openduck-hero.jpg",
+      "image/openduck-1.jpg",
+      "image/openduck-2.jpg",
     ],
     specs: [
       { label: "Height", value: "Approx. 42 cm (legs extended)" },
