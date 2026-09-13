@@ -16,7 +16,7 @@ function productCardHtml(product) {
         <div class="product-card-body">
           <div class="product-card-meta">
             <span>${CATEGORIES[product.category] || product.category}</span>
-            <span>${product.brand}</span>
+            <span>${BRANDS[product.brand] || product.brand}</span>
           </div>
           <h3>${product.name}</h3>
           <p>${product.tagline}</p>

@@ -132,7 +132,7 @@ function renderProductPage() {
   if (price) price.textContent = formatPrice(product.price, product.currency, product.priceNote);
   if (description) description.textContent = product.description;
   if (categoryLabel) categoryLabel.textContent = CATEGORIES[product.category];
-  if (brandLabel) brandLabel.textContent = product.brand;
+  if (brandLabel) brandLabel.textContent = BRANDS[product.brand] || product.brand;
 
   if (stockBadge) {
     stockBadge.textContent = product.inStock ? "10–20 Days Production" : "Pre-Order";
