@@ -39,9 +39,9 @@
             <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.6;">
               Thank you for your message! Our professional team will contact you by email or phone within <span style="color: white; font-weight: 600;">24 hours</span>.
             </p>
-            <div style="margin-top: 2.5rem;">
+            <div class="thanks-actions" style="margin-top: 2.5rem;">
               <a href="/" class="btn btn-primary btn-lg">Back to Home</a>
-              <a href="/store.html" class="btn btn-outline btn-lg" style="margin-left: 0.8rem;">Browse Products</a>
+              <a href="/store.html" class="btn btn-outline btn-lg">Browse Products</a>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@
 
       <section class="section" style="background: white;">
         <div class="container">
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto;">
+          <div class="thanks-cards">
             <div style="text-align: center; padding: 2rem; border-radius: var(--radius); background: var(--gray-50);">
               <div style="width: 60px; height: 60px; background: var(--blue-100); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
                 <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue-600)" stroke-width="2" style="width: 28px; height: 28px;">
@@ -87,7 +87,7 @@
             <h2 style="margin-bottom: 1rem;">Want to learn more?</h2>
             <p style="color: var(--gray-500); margin-bottom: 2rem;">We provide comprehensive technical support and solutions  feel free to keep exploring</p>
             <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem;">
-              <a href="/courses.html" class="btn btn-outline">Courses</a>
+              <a href="/store.html?category=education" class="btn btn-outline">Courses</a>
               <a href="/opensource.html" class="btn btn-outline">Open Source</a>
               <a href="/about.html" class="btn btn-outline">About Us</a>
               <a href="/contact.html" class="btn btn-outline">Contact</a>
@@ -102,6 +102,23 @@
     <script src="js/include.js?v=20260913b"></script>
     <script src="js/mobile.js?v=20260922"></script>
     <style>
+      .thanks-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .thanks-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+      @media (max-width: 768px) {
+        .thanks-cards { grid-template-columns: 1fr; }
+      }
       @keyframes pulse {
         0%, 100% { transform: scale(1); }
         50% { transform: scale(1.05); }
