@@ -3244,7 +3244,8 @@ html.mobile-active .footer-bottom .footer-tagline {
 
 /* Extra mobile footer copyright (single line) */
 html.mobile-active .footer-bottom::before {
-  content: "© 2026 WWNT Robotics Corp.  All rights reserved." !important;
+  content: "© 2026 WWNT Robotics Corp.\A All rights reserved." !important;
+  white-space: pre-line !important;
   color: rgba(255, 255, 255, 0.7) !important;
   font-size: 0.75rem !important;
   display: block !important;
