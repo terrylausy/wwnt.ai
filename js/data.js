@@ -258,12 +258,12 @@ const PRODUCTS = [
     tagline: "2.4GHz Quad-Core Arm Cortex-A76 | VideoCore VII GPU | Dual 4Kp60 HDMI | PCIe 2.0",
     description: "Raspberry Pi 5 is the flagship single-board computer powered by the Broadcom BCM2712 2.4GHz quad-core 64-bit Arm Cortex-A76 processor, delivering 2–3× the performance of the previous generation. It features the VideoCore VII GPU with OpenGL ES 3.1 and Vulkan 1.2 support, dual 4Kp60 HDMI outputs with HDR, and a 4Kp60 HEVC decoder. Available in 4GB, 8GB and 16GB LPDDR4X-4267 memory configurations. Connectivity includes dual-band 802.11ac Wi-Fi, Bluetooth 5.0/BLE, Gigabit Ethernet with PoE+ support, two USB 3.0 ports (5Gbps), two USB 2.0 ports, dual 4-lane MIPI camera/display interfaces, and a PCIe 2.0 x1 interface for fast peripherals. Powered via 5V/5A USB-C with Power Delivery, with a 40-pin GPIO header, real-time clock and power button. Ideal for AI, robotics, embedded systems and IoT applications.",
     images: [
+      "image/rpi5-6.jpg",
       "image/rpi5-1.jpg",
       "image/rpi5-2.jpg",
       "image/rpi5-3.jpg",
       "image/rpi5-4.png",
       "image/rpi5-5.jpg",
-      "image/rpi5-6.jpg",
     ],
     variants: [
       { label: "4GB RAM", price: 399 },
