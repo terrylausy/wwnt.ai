@@ -124,6 +124,13 @@ function renderProductPage() {
         class="showcase-video"
       ></video>
     `;
+    // 视频源缺失/加载失败时自动隐藏视频区，避免出现 404 黑屏
+    const videoEl = videoContainer.querySelector("video");
+    if (videoEl) {
+      videoEl.addEventListener("error", () => {
+        videoShowcase.hidden = true;
+      });
+    }
     videoShowcase.hidden = false;
   }
 
