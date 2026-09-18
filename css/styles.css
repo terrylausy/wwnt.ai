@@ -1658,6 +1658,52 @@ a.contact-item:hover {
   margin: 0.2rem 0;
 }
 
+/* 友情链接 / Partners */
+.footer-partners {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0 2rem;
+  text-align: center;
+}
+
+.footer-partners-title {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+}
+
+.footer-partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.partner-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.55rem 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.partner-logo img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
