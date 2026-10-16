@@ -126,7 +126,7 @@ const PRODUCTS = [
     badgeType: "badge-hot",
     tagline: "7+1 DOF Dual Arm | 10 kg Peak Load | ±0.5 mm Repeatability | 2 m/s | NVIDIA Orin NX",
     description: "The OpenArm-HT-X1 is a wheeled dual-arm intelligent robot that seamlessly integrates a 7-DOF industrial-grade robotic arm with a differential-drive chassis for flexible mobile manipulation. Coordinated arm movement meets agile mobility in a compact 80 kg platform. Powered by an NVIDIA Orin NX 16GB computing platform, a ZED Mini depth camera, and an Ubuntu 22.04 + ROS2 software stack, it is built for research and teaching, embodied intelligence, flexible loading and unloading, dual-arm collaborative assembly, and robot customization.",
-    images: ["image/openarm-ht-x1-hero.png"],
+    images: ["image/openarm-ht-x1-full.png"],
     specs: [
       { label: "Degrees of Freedom", value: "7+1 per arm (single arm + end-effector); Neck 2, Waist 2" },
       { label: "Peak Load (Single Arm)", value: "10 kg" },
