@@ -89,7 +89,7 @@ const PRODUCTS = [
     name: "MicroDuck Open-Source Robot Duck",
     category: "education",
     brand: "WWNT",
-    price: 499,
+    price: 599,
     currency: "USD",
     priceNote: "Ex-Works",
     badge: "Fully Assembled Kit",
