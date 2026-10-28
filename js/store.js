@@ -8,7 +8,7 @@ function productCardHtml(product) {
 
   return `
     <article class="product-card" data-id="${product.id}">
-      <a href="product.html?id=${product.id}" class="product-card-link">
+      <a href="${product.url || `product.html?id=${product.id}`}" class="product-card-link">
         <div class="product-card-media">
           ${badge}
           <img src="${product.images[0]}" alt="${product.name}" loading="lazy" />

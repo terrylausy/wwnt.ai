@@ -92,6 +92,7 @@ const PRODUCTS = [
     price: 699,
     currency: "USD",
     priceNote: "Ex-Works",
+    url: "microduck.html",
     badge: "Fully Assembled Kit",
     badgeType: "badge-new",
     tagline: "15 × HD1910 TTL Bus Servos | 3D-Printed Body | IMX219 Camera | IMU | Fully Open Source",

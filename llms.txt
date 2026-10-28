@@ -1,0 +1,29 @@
+# WWNT Robotics
+
+> WWNT Robotics helps universities, labs and small startups make robot dreams come true — bipedal humanoids, robotic arms, dexterous hands and open-source kits.
+
+## Key pages
+
+- [Home](https://wwnt.ai/): Company overview and featured robots.
+- [MicroDuck](https://wwnt.ai/microduck.html): Open-source robot duck kit — 15 × HD1910 TTL bus servos, 3D-printed body, IMX219 camera and IMU. $699 Ex-Works, pre-order with 45-day lead time.
+- [MicroDuck Accessories](https://wwnt.ai/microduck-accessories.html): Spare HD1910 servos, IMX219 camera, LSM6DSV16X IMU, 3D-printed shells, servo control board and power accessories.
+- [Pricing / Store](https://wwnt.ai/store.html): Full product catalog and pricing.
+- [Open Source](https://wwnt.ai/opensource.html): Open-source community, SDK and simulation demos.
+
+## MicroDuck (product)
+
+- **Name**: MicroDuck Open-Source Robot Duck
+- **Brand**: WWNT Robotics
+- **Price**: $699 USD (Ex-Works)
+- **Availability**: Pre-order, 45-day lead time
+- **Type**: Fully assembled open-source robot duck kit
+- **Actuators**: 15 × HD1910 TTL bus servos (5–8.4 V, 10 kg·cm stall torque, 0.09 s/60°)
+- **Body**: 3D-printed (PLA structural, TPU foot pads)
+- **Sensors**: IMX219 160° wide-angle camera, LSM6DSV16X IMU
+- **Power**: 7.5 V DC adapter (wired, no lithium battery)
+- **Open source**: GitHub — https://github.com/UnitClaw
+
+## Contact
+
+- Email: Support@wwntAI.com
+- China site: https://www.wwntai.com

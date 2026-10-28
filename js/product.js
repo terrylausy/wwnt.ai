@@ -15,6 +15,18 @@ function renderProductPage() {
 
   document.title = `${product.name} · WWNT Robotics`;
 
+  // SEO: if a product has a dedicated static page, declare it canonical to avoid duplicate content
+  if (product.url) {
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", new URL(product.url, window.location.href).href);
+    document.querySelector('meta[name="robots"]')?.setAttribute("content", "index, follow");
+  }
+
   const mainImage = document.getElementById("main-image");
   const thumbs = document.getElementById("image-thumbs");
   const title = document.getElementById("product-title");
