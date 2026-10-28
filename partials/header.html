@@ -18,10 +18,52 @@
     </a>
 
     <nav class="main-nav" aria-label="Main navigation">
+      <div class="nav-dropdown" id="microduck-dropdown">
+        <button class="nav-link nav-dropdown-toggle" data-nav="microduck" aria-haspopup="true" aria-expanded="false">
+          MicroDuck
+          <svg class="nav-dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="product.html?id=wwnt-microduck" class="nav-dropdown-item">
+            <span class="nav-dropdown-icon">🦆</span>
+            <span class="nav-dropdown-text">
+              <strong>MicroDuck</strong>
+              <small>Open-source robot duck</small>
+            </span>
+          </a>
+          <a href="microduck-accessories.html" class="nav-dropdown-item">
+            <span class="nav-dropdown-icon">🔩</span>
+            <span class="nav-dropdown-text">
+              <strong>MicroDuck Accessories</strong>
+              <small>Parts, upgrades &amp; add-ons</small>
+            </span>
+          </a>
+        </div>
+      </div>
       <a href="store.html" class="nav-link" data-nav="store">Pricing</a>
       <a href="opensource.html" class="nav-link" data-nav="opensource">Open Source</a>
-      <a href="about.html" class="nav-link" data-nav="about">About</a>
-      <a href="press.html" class="nav-link" data-nav="press">Press Release</a>
+      <div class="nav-dropdown" id="about-dropdown">
+        <button class="nav-link nav-dropdown-toggle" data-nav="about" aria-haspopup="true" aria-expanded="false">
+          About
+          <svg class="nav-dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <a href="about.html" class="nav-dropdown-item">
+            <span class="nav-dropdown-icon">🏢</span>
+            <span class="nav-dropdown-text">
+              <strong>About</strong>
+              <small>Company &amp; vision</small>
+            </span>
+          </a>
+          <a href="press.html" class="nav-dropdown-item">
+            <span class="nav-dropdown-icon">📰</span>
+            <span class="nav-dropdown-text">
+              <strong>Press Release</strong>
+              <small>News &amp; announcements</small>
+            </span>
+          </a>
+        </div>
+      </div>
       <div class="nav-dropdown" id="help-dropdown">
         <button class="nav-link nav-dropdown-toggle" data-nav="help" aria-haspopup="true" aria-expanded="false">
           Help Center
@@ -73,10 +115,28 @@
     </div>
 
     <nav class="mobile-nav">
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-dropdown-toggle" data-nav="microduck" aria-expanded="false">
+          <span>MicroDuck</span>
+          <svg class="nav-dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-nav-dropdown-menu">
+          <a href="product.html?id=wwnt-microduck" class="nav-link">🦆 MicroDuck</a>
+          <a href="microduck-accessories.html" class="nav-link">🔩 MicroDuck Accessories</a>
+        </div>
+      </div>
       <a href="store.html" class="nav-link" data-nav="store">Pricing</a>
       <a href="opensource.html" class="nav-link" data-nav="opensource">Open Source</a>
-      <a href="about.html" class="nav-link" data-nav="about">About</a>
-      <a href="press.html" class="nav-link" data-nav="press">Press Release</a>
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-dropdown-toggle" data-nav="about" aria-expanded="false">
+          <span>About</span>
+          <svg class="nav-dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-nav-dropdown-menu">
+          <a href="about.html" class="nav-link">🏢 About</a>
+          <a href="press.html" class="nav-link">📰 Press Release</a>
+        </div>
+      </div>
       <div class="mobile-nav-dropdown">
         <button class="mobile-nav-dropdown-toggle" data-nav="help" aria-expanded="false">
           <span>Help Center</span>

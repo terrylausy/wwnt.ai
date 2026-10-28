@@ -89,7 +89,7 @@ const PRODUCTS = [
     name: "MicroDuck Open-Source Robot Duck",
     category: "education",
     brand: "WWNT",
-    price: 599,
+    price: 699,
     currency: "USD",
     priceNote: "Ex-Works",
     badge: "Fully Assembled Kit",
@@ -133,7 +133,8 @@ const PRODUCTS = [
     ],
     github: "https://github.com/UnitClaw",
     contact: { email: "Support@wwntAI.com", phone: "+1-662-681-4342", whatsapp: "+86-189-2582-6701" },
-    inStock: true,
+    inStock: false,
+    leadTime: "45 Days",
     featured: true,
   },
   {

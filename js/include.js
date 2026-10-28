@@ -7,7 +7,7 @@ async function loadPartial(url, targetId) {
   const target = document.getElementById(targetId);
   if (!target) return;
 
-  const response = await fetch(url + "?v=20260919");
+  const response = await fetch(url + "?v=20261028");
   if (!response.ok) {
     throw new Error(`Failed to load ${url}: ${response.status}`);
   }
@@ -25,14 +25,18 @@ function setActiveNav() {
 }
 
 function setupHelpDropdown() {
-  /* ---- Desktop dropdown: hover + click ---- */
-  const desktopDropdown = document.querySelector(".main-nav .nav-dropdown");
-  if (desktopDropdown) {
+  /* ---- Desktop dropdowns: hover + click (wired for every dropdown) ---- */
+  const desktopDropdowns = document.querySelectorAll(".main-nav .nav-dropdown");
+
+  desktopDropdowns.forEach((desktopDropdown) => {
     const toggle = desktopDropdown.querySelector(".nav-dropdown-toggle");
+    if (!toggle) return;
     let hoverTimer = null;
 
     const open = () => {
       clearTimeout(hoverTimer);
+      // Only one desktop dropdown open at a time
+      desktopDropdowns.forEach((d) => d.classList.remove("is-open"));
       desktopDropdown.classList.add("is-open");
       toggle.setAttribute("aria-expanded", "true");
     };
@@ -57,15 +61,17 @@ function setupHelpDropdown() {
     desktopDropdown.querySelectorAll(".nav-dropdown-item").forEach((item) => {
       item.addEventListener("click", () => close());
     });
-  }
+  });
 
-  /* ---- Click outside closes desktop dropdown ---- */
+  /* ---- Click outside closes desktop dropdowns ---- */
   document.addEventListener("click", (e) => {
-    if (desktopDropdown && !desktopDropdown.contains(e.target)) {
-      desktopDropdown.classList.remove("is-open");
-      const t = desktopDropdown.querySelector(".nav-dropdown-toggle");
-      if (t) t.setAttribute("aria-expanded", "false");
-    }
+    desktopDropdowns.forEach((desktopDropdown) => {
+      if (!desktopDropdown.contains(e.target)) {
+        desktopDropdown.classList.remove("is-open");
+        const t = desktopDropdown.querySelector(".nav-dropdown-toggle");
+        if (t) t.setAttribute("aria-expanded", "false");
+      }
+    });
   });
 
   /* ---- Mobile accordion toggle ---- */

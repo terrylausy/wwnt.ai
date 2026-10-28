@@ -167,7 +167,9 @@ function renderProductPage() {
   if (brandLabel) brandLabel.textContent = BRANDS[product.brand] || product.brand;
 
   if (stockBadge) {
-    stockBadge.textContent = product.inStock ? "10–20 Days Production" : "Pre-Order";
+    stockBadge.textContent = product.inStock
+      ? "10–20 Days Production"
+      : (product.leadTime ? `Pre-Order · ${product.leadTime} Lead Time` : "Pre-Order");
     stockBadge.className = `pill ${product.inStock ? "pill-success" : "pill-warn"}`;
   }
 
