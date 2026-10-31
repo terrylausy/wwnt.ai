@@ -39,6 +39,27 @@
       ]
     }
     </script>
+
+    <!-- JSON-LD: Product (parts set) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Set of MicroDuck Parts (Excluding 3D Plastics Parts)",
+      "sku": "wwnt-microduck-parts",
+      "description": "Complete MicroDuck electronics and mechanical kit without the 3D-printed plastic parts — 15 × HD1910 TTL bus servos, IMX219 camera module, LSM6DSV16X IMU, servo control board, screws, bearings, mounting tools and adapter cable.",
+      "image": "https://wwnt.ai/image/microduck-assembly.jpg",
+      "brand": { "@type": "Brand", "name": "WWNT Robotics" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://wwnt.ai/microduck-accessories.html",
+        "priceCurrency": "USD",
+        "price": "479",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/PreOrder"
+      }
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -72,6 +93,27 @@
       <!-- Accessory list -->
       <section class="section features-section">
         <div class="container">
+          <!-- Parts set (priced SKU) -->
+          <div class="glass-panel" style="padding: 1.75rem 2rem; margin-bottom: 2rem">
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap">
+              <span class="pill">Parts Kit</span>
+              <span class="pill pill-warn">Pre-Order · 45 Days Lead Time</span>
+            </div>
+            <h2 style="margin: 0.6rem 0 0.5rem; font-size: 1.4rem">Set of MicroDuck Parts (Excluding 3D Plastics Parts)</h2>
+            <strong style="font-size: 1.2rem; color: var(--blue-600, #2563eb)">$479.00 Ex-Works</strong>
+            <p style="margin: 0.6rem 0 1.25rem">
+              The complete electronics and mechanical kit to build your own MicroDuck — 15 × HD1910
+              TTL bus servos, IMX219 camera module, LSM6DSV16X IMU, servo control board, full screw set,
+              bearings, mounting tools and the AMP2.0-to-5264 adapter cable. 3D-printed plastic parts are
+              <strong>not included</strong>; print your own shells from the open-source files or purchase
+              them separately.
+            </p>
+            <div class="hero-actions">
+              <a href="inquiry.html?product=Set%20of%20MicroDuck%20Parts%20(Excluding%203D%20Plastics%20Parts)" class="btn btn-primary">Inquire / Order Now</a>
+              <a href="product.html?id=wwnt-microduck" class="btn btn-ghost">View MicroDuck</a>
+            </div>
+          </div>
+
           <div class="features-grid">
             <div class="feature-item">
               <div class="feature-num">01</div>
