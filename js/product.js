@@ -191,6 +191,38 @@ function renderProductPage() {
       .join("");
   }
 
+  // Bill of Materials（部件套装等含 bom 字段的产品展示完整 BOM，含图片）
+  const bomEl = document.getElementById("product-bom");
+  if (bomEl && product.bom && product.bom.length) {
+    bomEl.hidden = false;
+    bomEl.innerHTML = `
+      <div class="bom-heading">
+        <h2>Bill of Materials</h2>
+        <p>${product.bom.length} line items · 3D-printed plastic parts not included</p>
+      </div>
+      <div class="bom-list">
+        ${product.bom
+          .map(
+            (item) => `
+          <div class="bom-item glass-panel">
+            <div class="bom-img">
+              <img src="${item.image}" alt="${item.name}" loading="lazy" />
+            </div>
+            <div class="bom-body">
+              <div class="bom-title">
+                <strong>${item.no}. ${item.name}</strong>
+                <span class="pill pill-soft">Qty: ${item.qty}</span>
+              </div>
+              <div class="bom-category">${item.category}</div>
+              <div class="bom-spec">${item.spec.replace(/\n/g, "<br />")}</div>
+            </div>
+          </div>`
+          )
+          .join("")}
+      </div>
+    `;
+  }
+
   if (githubLink) {
     githubLink.href = product.github;
     githubLink.textContent = product.github.replace(/^https?:\/\//, "");

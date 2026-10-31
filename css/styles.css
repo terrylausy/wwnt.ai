@@ -7842,3 +7842,79 @@ html.mobile-active .mobile-nav .nav-link-external {
     height: 45vh;
   }
 }
+/* ===== Product BOM (Bill of Materials) ===== */
+.product-bom {
+  margin-top: 2rem;
+}
+.product-bom .bom-heading {
+  margin-bottom: 1.25rem;
+}
+.product-bom .bom-heading h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem;
+}
+.product-bom .bom-heading p {
+  margin: 0;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+.bom-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.bom-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: flex-start;
+}
+.bom-img {
+  flex: 0 0 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-50);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.bom-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.bom-body {
+  flex: 1;
+  min-width: 0;
+}
+.bom-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.bom-title strong {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.bom-category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--blue-600, #2563eb);
+  font-weight: 600;
+  margin: 0.2rem 0 0.4rem;
+}
+.bom-spec {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--gray-600);
+}
+@media (max-width: 768px) {
+  .bom-list {
+    grid-template-columns: 1fr;
+  }
+}
