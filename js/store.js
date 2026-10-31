@@ -64,7 +64,11 @@ function filterProducts({ search = "", category = "all", brand = "all", sort = "
       list.sort((a, b) => a.name.localeCompare(b.name, "en"));
       break;
     default:
-      list.sort((a, b) => Number(b.featured) - Number(a.featured));
+      list.sort(
+        (a, b) =>
+          Number(b.priority || 0) - Number(a.priority || 0) ||
+          Number(b.featured) - Number(a.featured)
+      );
   }
 
   return list;

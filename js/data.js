@@ -136,6 +136,7 @@ const PRODUCTS = [
     inStock: false,
     leadTime: "30 Days",
     featured: true,
+    priority: 2,
   },
   {
     id: "wwnt-microduck-parts",
@@ -348,6 +349,7 @@ const PRODUCTS = [
     inStock: false,
     leadTime: "21 Days",
     featured: false,
+    priority: 1,
   },
   {
     id: "wwnt-openarm",
