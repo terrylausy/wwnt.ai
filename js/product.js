@@ -206,7 +206,7 @@ function renderProductPage() {
             (item) => `
           <div class="bom-item glass-panel">
             <div class="bom-img">
-              <img src="${item.image}" alt="${item.name}" loading="lazy" />
+              <img src="${item.image}" alt="${item.name}" />
             </div>
             <div class="bom-body">
               <div class="bom-title">

@@ -134,7 +134,7 @@ const PRODUCTS = [
     github: "https://github.com/UnitClaw",
     contact: { email: "Support@wwntAI.com", phone: "+1-662-681-4342", whatsapp: "+86-189-2582-6701" },
     inStock: false,
-    leadTime: "45 Days",
+    leadTime: "30 Days",
     featured: true,
   },
   {
@@ -346,7 +346,7 @@ const PRODUCTS = [
     github: "https://github.com/UnitClaw",
     contact: { email: "Support@wwntAI.com", phone: "+1-662-681-4342", whatsapp: "+86-189-2582-6701" },
     inStock: false,
-    leadTime: "45 Days",
+    leadTime: "21 Days",
     featured: false,
   },
   {
