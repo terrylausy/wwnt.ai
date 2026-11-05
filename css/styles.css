@@ -7918,3 +7918,21 @@ html.mobile-active .mobile-nav .nav-link-external {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Product notice (study-sample / limitation) ===== */
+.product-notice {
+  display: block;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  border-left: 4px solid #d97706;
+  border-radius: 10px;
+  background: rgba(217, 119, 6, 0.08);
+  color: #92400e;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.product-notice strong {
+  color: #b45309;
+  font-weight: 700;
+}

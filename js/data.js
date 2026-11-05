@@ -96,6 +96,7 @@ const PRODUCTS = [
     badge: "Fully Assembled Kit",
     badgeType: "badge-new",
     tagline: "15 × HD1901M TTL Bus Servos | 3D-Printed Body | IMX219 Camera | IMU | Fully Open Source",
+    notice: "Study sample only — the complete MicroDuck robot is limited to one (1) unit per customer, for study and evaluation purposes.",
     description: "MicroDuck is an open-source robot duck delivered as a fully assembled kit — 15 × HD1901M metal-gear TTL bus servos plus the complete set of 3D-printed parts, electronics and accessories, ready to run out of the box. The dual-axis servo linkage and multi-hole mounting plate drive the neck, body and legs for expressive, responsive motion, while the TTL serial bus daisy-chain wiring keeps the whole build compact and easy to extend. An IMX219 160° wide-angle camera module, an LSM6DSV16X IMU and onboard storage make it a complete platform for robotics courses, embedded system teaching, maker projects and open-source ecosystem development. Housing material, colors, coatings and payloads are deeply customizable for campus IP robots and lab branding.",
     images: [
       "image/microduck-hero.jpg",

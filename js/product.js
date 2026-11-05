@@ -186,9 +186,14 @@ function renderProductPage() {
   }
 
   if (specs) {
-    specs.innerHTML = product.specs
-      .map((item) => `<div class="spec-row"><span>${item.label}</span><strong>${item.value}</strong></div>`)
-      .join("");
+    const noticeHtml = product.notice
+      ? `<div class="product-notice"><strong>Note:</strong> ${product.notice}</div>`
+      : "";
+    specs.innerHTML =
+      noticeHtml +
+      product.specs
+        .map((item) => `<div class="spec-row"><span>${item.label}</span><strong>${item.value}</strong></div>`)
+        .join("");
   }
 
   // Bill of Materials（部件套装等含 bom 字段的产品展示完整 BOM，含图片）
