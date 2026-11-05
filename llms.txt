@@ -6,7 +6,7 @@
 
 - [Home](https://wwnt.ai/): Company overview and featured robots.
 - [MicroDuck Parts & Spares](https://wwnt.ai/microduck-accessories.html): Set of MicroDuck Parts (Excluding 3D Plastics Parts) — $479; plus spare Feetech HD1901M servos, IMX219 camera, LSM6DSV16X IMU, VL53L8CX ToF, NP-F550 battery and debug board. 3D-printed parts not included (self-print).
-- [Global Supply](https://wwnt.ai/microduck-supply.html): MicroDuck manufacturing & integration, authorized FEETECH supply chain, complete robotics ecosystem; DIY kits, spare parts, technical support and educational packages.
+- [Global Supply](https://wwnt.ai/microduck-supply.html): MicroDuck parts sourcing & kitting, authorized FEETECH supply chain, complete robotics ecosystem; DIY kits, spare parts, technical support and educational packages.
 - [Pricing / Store](https://wwnt.ai/store.html): Full product catalog and pricing.
 - [Open Source](https://wwnt.ai/opensource.html): Open-source community, SDK and simulation demos.
 
