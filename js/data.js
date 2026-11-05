@@ -165,184 +165,29 @@ const PRODUCTS = [
       { label: "3D-Printed Parts", value: "Not included — print your own from the open-source files" },
       { label: "Power", value: "7.5 V DC adapter, wired power (no lithium battery)" },
     ],
-    bom: [
-
-    {
-        "no": 2,
-        "category": "Main Controller (SBC)",
-        "name": "Radxa Zero 3W main board (2GB)",
-        "qty": "1",
-        "spec": "Ultra-compact RK3566 single-board computer with Wi-Fi 6 + USB 3.0 + MIPI CSI; suited for IoT and edge computing.\nProcessor: RK3566 quad-core Cortex-A55 @ 1.6 GHz; GPU: Mali-G52-2EE (Vulkan 1.1 / OpenCL 2.0); Memory: 2 GB LPDDR4; Wireless: Wi-Fi 6 + Bluetooth 5.4; Storage: microSD card (no on-board eMMC); Interfaces: USB 3.0 + USB 2.0 OTG (Type-C); Display: Micro HDMI 1080p60; Camera: MIPI CSI (22-pin); Dimensions: 65 × 30 mm; OS: Debian/Ubuntu",
-        "image": "image/microduck-bom-02.jpg"
-    },
-    {
-        "no": 3,
-        "category": "Storage Media",
-        "name": "64GB microSD card (Ezviz)",
-        "qty": "1",
-        "spec": "Model: CS-CMT-CARDT64G; Capacity: 64 GB; Type: TF (microSD) card; Bus interface: UHS-I; Speed class: Class 10 (C10), V10 video speed class; Nominal read speed: 90 MB/s; Nominal write speed: 20–25 MB/s; 4K random-write IOPS ≥ 1800 (optimized for Ezviz surveillance); File system: factory pre-formatted FAT32; Operating temperature: 0 °C to 70 °C",
-        "image": "image/microduck-bom-03.png"
-    },
-    {
-        "no": 4,
-        "category": "Expansion Interface Board",
-        "name": "Raspberry Pi Robot HAT board",
-        "qty": "1",
-        "spec": "★ Board outline 65.0 × 30.9 mm, 4-layer (F_Cu / In1 / In2 / B_Cu), corner radius R3.5; BOM: 47 rows / 123 components (incl. 5 rows, 9 DNP), 113 populated positions.\nServo bus: half-duplex TTL via 74LVC1G08 + SN74LVC1G125/126, direction controlled by Dynamixel_dir.\nPower distribution: +BATT feeds servos directly; AP63205 + 6.8 µH buck → +5 V (2 A) for the main controller.\nAudio: TLV320AIC3104 (i2c3 0x18 + i2s3) + PAM8406 amplifier + MEMS microphone.\nExpansion: J5–J8 JST SH 1 mm 4P (Qwiic) for ToF.\nServo ports: J13/J14 = JST EH 3P (TTL); J3/J11 = JST EH 4P (RS-485, 3 A max)",
-        "image": "image/microduck-bom-04.png"
-    },
-    {
-        "no": 5,
-        "category": "Sensor Adapter Board",
-        "name": "imu_to_dxl adapter board",
-        "qty": "1",
-        "spec": "IMU IC: LSM6DSV16XTR; MCU: Cortex-M4 @ 120 MHz high-speed processing, good expandability.\nSupply voltage: 5–24 V (min. 4.5 V). Communication: servo single-bus TTL serial, 3.3 V logic (do not exceed 3.6 V). Baud rate: 1 Mbps; communication address: 200.\nProtocol: auto-adapts to native Dynamixel 2.0 or the Feetech protocol; detailed protocol documentation available.\nSoftware: supports in-robot online firmware upgrade (stop the robotd service to release the serial port before upgrading).\nPower conversion efficiency: > 90%. Operating temperature: −40 °C to +85 °C",
-        "image": "image/microduck-bom-05.png"
-    },
-    {
-        "no": 6,
-        "category": "Bus Distribution Board",
-        "name": "Servo bus HUB + banana PCB",
-        "qty": "1",
-        "spec": "Function: 15-channel parallel split of the servo bus + battery power distribution.\nPower connectors: 2.5 mm banana plugs (gold-plated PCB) ×2.\nBus topology: hybrid daisy-chain/star to reduce harness length and voltage drop.\nSecured by the banana_pcb_locker printed part.\n★ Bus is half-duplex TTL; ensure a common GND and consistent wire order",
-        "image": "image/microduck-bom-06.png"
-    },
-    {
-        "no": 7,
-        "category": "Actuator / Servo",
-        "name": "Feetech HD1901M bus servo",
-        "qty": "15",
-        "spec": "★ Dimensions: 34 × 20 × 23 mm, weight 21 ± 2 g. Operating voltage: 4.0–8.4 V; stall torque 1.47 N·m @ 7.4 V (approx. 2.5× the XL330).\n★ Communication: TTL serial bus, 3-wire (1=GND, 2=VCC, 3=Signal), half-duplex asynchronous 8N1.\n★ Baud rate: 38,400–1 Mbps, factory default 1 Mbps; ID range 0–253, factory default ID 1.\nEncoder: 12-bit magnetic, 0.088°/step resolution; gear backlash ≤ 0.5°.\nFeedback: position / speed / load / voltage / current / temperature.\nProtection: overcurrent (0.5 A for 2 s, off by default), overvoltage (>10 V or <4 V, off by default), over-temperature (output cut-off at 80 °C, on by default).\nFactory operating mode 4: position-only PD (Sim2Real).\n★ Horn is a protruding 25T spline, not compatible with the XL330's recessed spline; position-count direction is inverted vs. the XL330 (set all 15 units to −1)",
-        "image": "image/microduck-bom-07.png"
-    },
-    {
-        "no": 8,
-        "category": "Debugging Tool",
-        "name": "Feetech URT-2 servo debug board",
-        "qty": "1",
-        "spec": "Model: Feetech FE-URT-1 multi-function serial converter board (USB to RS-485 / TTL).\nDimensions: 55.8 × 36.6 × 11.5 mm; mounting-hole pitch 48.8 × 28.8 mm; weight 12.5 g.\nUSB: Mini-USB, USB 2.0 full-speed. Dual outputs: Ch. A half-duplex RS-485 (SMS series); Ch. B half-duplex TTL single bus (SCS/STS series — used for this build).\nServo connectors: SCS 3-pin 5264-3AW / SMS 4-pin 5264-4AW, keyed.\nUART: 2.54 mm pin header; usable as a general USB-to-serial adapter or to connect to an MCU UART.\nBaud rate: 50 bps–1 Mbps; UART logic 5 V / 3.3 V selectable.\nDirection: hardware auto-switching, no external enable IO required; multiple servos can share one bus.\nPower: 5 V from USB or external 5 V; USB supply has 500 mA overcurrent + overvoltage protection.\nActuator power terminal: 5.08 mm, up to 6 A (separate power distribution needed when daisy-chaining multiple servos).\nLEDs: D1 power / D2 TX / D3 RX.\nOS support: Windows 10 / 8.1 / 8 / 7 / Vista / XP (32/64-bit, digitally signed).\n★ Signal conversion only — no electrical isolation; provide separate servo-side power.\n★ Bundled with the FD (Feetech Debugger) host software; baud rate must be set to 1,000,000.\nInstall the USB-to-serial driver first (a COM port must appear in Device Manager)",
-        "image": "image/microduck-bom-08.png"
-    },
-    {
-        "no": 9,
-        "category": "Power / Battery",
-        "name": "NP-F550 battery",
-        "qty": "1",
-        "spec": "★ Dimensions: 25 × 38.4 × 70.7 mm; Li-ion battery; approx. 110 g.\nVoltage: 8.4 V. Capacity: approx. 2200 mAh with charge-level indicator. Charging port: USB-C.\nFull charge at 8.4 V equals the servo voltage ceiling — zero headroom; take care to observe undervoltage protection",
-        "image": "image/microduck-bom-09.png"
-    },
-    {
-        "no": 10,
-        "category": "Cable Harness",
-        "name": "AMP 2.0 double-ended adapter cable (servo wire)",
-        "qty": "1",
-        "spec": "5264-terminal 3P/4P double-ended cable for servo daisy-chaining and debugging.\nLength selectable 10–30 cm per routing.\n★ Wire order matches the HAT's JST EH ports: GND – VCC – Signal",
-        "image": "image/microduck-bom-10.png"
-    },
-    {
-        "no": 11,
-        "category": "Vision Sensor",
-        "name": "IMX219 camera module",
-        "qty": "1",
-        "spec": "Sensor: Sony IMX219 (CMOS), 1/4.0 type; 8 MP; active resolution 3280 (H) × 2464 (V).\nPixel size: 1.12 µm (H) × 1.12 µm (V); image diagonal: 4.60 mm (1/4.0 type).\nFrame rate: up to 30 fps in full-pixel scan mode. Focus: fixed.\nFoV: D = 74 ± 5° / H = 62 ± 3° / V = 49 ± 2°. Lens: 1G4P (1 glass + 4 plastic elements).\nModule size: 32 × 32 × 17.6 mm. Interface: 15-pin, 1 mm pitch MIPI CSI.\n★ Cable: 15-pin 1.0 mm on the module side, 22-pin 0.5 mm on the main-board side — a 15-to-22 adapter is required.\n★ A cable length of 4–15 cm suffices (camera and main board are both in the head, ~13 mm apart).\nDevice tree overlay: radxa-zero3-rpi-camera-v2; ISP config SENSOR=imx219.\n★ Mount rotated 90°, not flipped 180°",
-        "image": "image/microduck-bom-11.jpg"
-    },
-    {
-        "no": 12,
-        "category": "Ranging / Time-of-Flight Sensor",
-        "name": "VL53L8CX ToF module",
-        "qty": "1",
-        "spec": "IC: ST VL53L5CX (marketed as VL53L5X V2), direct ToF multi-zone ranging.\nZones: 8 × 8 = 64, software-switchable to 4 × 4 = 16. Range: 0–400 cm absolute, unaffected by target color or reflectivity.\nRange resolution: 1 mm (typical). Frame rate: up to 60 Hz (fastest among multi-zone micro-ToF).\nFoV: 63° (diagonal), software-reducible. Light source: 940 nm VCSEL (invisible to the human eye).\nAlgorithm: ST histogram-based, supports multiple targets within one FoV.\nInterface: I²C; on-board VIN / GND / SCL / SDA / INT / LPn. Supply: 3–5 V (VIN).\nDimensions: 15.8 × 10 mm, approx. 1.15 g, two mounting holes at 20 mm pitch.\nOptical cover: dust-resistant, suppresses cover crosstalk beyond 60 cm.\nFunctions: ranging / presence detection / proximity detection / ambient light / reflectivity / 3D",
-        "image": "image/microduck-bom-12.png"
-    },
-    {
-        "no": 13,
-        "category": "Audio Component",
-        "name": "Speaker",
-        "qty": "1",
-        "spec": "Specs: 8 Ω / 2 W small-cavity speaker (2040 type); connects to the HAT's PAM8406 amplifier output (Wago terminal).\nRequired only when using the on-board audio solution; can be omitted entirely if audio is not needed.\nLead wires approx. 10 cm",
-        "image": "image/microduck-bom-13.png"
-    },
-    {
-        "no": 14,
-        "category": "Mechanical Bearing",
-        "name": "Bearing 10×15×3",
-        "qty": "3",
-        "spec": "ID 10 mm / OD 15 mm / thickness 3 mm.\nType: miniature deep-groove ball bearing (flanged F6800 recommended for better axial retention).\nUse: axial positioning of leg joints. Material: bearing steel GCr15; ZZ dust shield recommended",
-        "image": "image/microduck-bom-14.png"
-    },
-    {
-        "no": 15,
-        "category": "Mechanical Bearing",
-        "name": "Bearing 16×22×4",
-        "qty": "11",
-        "spec": "ID 16 mm / OD 22 mm / thickness 4 mm.\nType: thin-section deep-groove ball bearing (6802).\n★ Use: hip roll bearing housing (press-fit into the top socket) + knee joints — 11 positions total.\nHousing dimensions are tied to the servo horn axial relationship; if you change servos, the printed parts must be adjusted accordingly",
-        "image": "image/microduck-bom-15.png"
-    },
-    {
-        "no": 16,
-        "category": "Mechanical Bearing",
-        "name": "Bearing 6×12×3",
-        "qty": "4",
-        "spec": "ID 6 mm / OD 12 mm / thickness 3 mm (686ZZ). Miniature deep-groove ball bearing with dust shield.\n★ Required only for the roller-skate variant (wheel rollers); can be omitted for the pure walking version",
-        "image": "image/microduck-bom-16.png"
-    },
-    {
-        "no": 17,
-        "category": "Fastener / Screw",
-        "name": "Self-tapping screw, flat head M2×5",
-        "qty": "1 pack",
-        "spec": "Spec: M2 × 5 mm, flat head (pan head), Phillips drive.\nMaterial: nickel-plated carbon steel or stainless steel.\n★ For self-tapping into printed plastics — avoid over-torquing to prevent stripped threads. Use with Loctite 243 to prevent loosening",
-        "image": "image/microduck-bom-17.png"
-    },
-    {
-        "no": 18,
-        "category": "Fastener / Screw",
-        "name": "Self-tapping screw, flat head M2×6",
-        "qty": "1 pack",
-        "spec": "Spec: M2 × 6 mm, flat-head Phillips.\nMaterial: nickel-plated carbon steel / stainless steel.\nUse: housing-to-inner-frame connections (thicker wall sections)",
-        "image": "image/microduck-bom-18.png"
-    },
-    {
-        "no": 19,
-        "category": "Fastener / Screw",
-        "name": "Self-tapping screw, flat head M2×8",
-        "qty": "1 pack",
-        "spec": "Spec: M2 × 8 mm, flat-head Phillips.\nUse: positions requiring penetration through two printed layers.\nNote: excessive length may hit the servo or PCB — verify depth before assembly",
-        "image": "image/microduck-bom-19.png"
-    },
-    {
-        "no": 20,
-        "category": "Fastener / Screw",
-        "name": "Self-tapping screw, flat head M2.5×6",
-        "qty": "1 pack",
-        "spec": "Spec: M2.5 × 6 mm, flat-head Phillips.\nUse: housing connection points carrying higher load.\n★ Not interchangeable with the M2 series — different hole diameters",
-        "image": "image/microduck-bom-20.png"
-    },
-    {
-        "no": 21,
-        "category": "Fastener / Screw",
-        "name": "Self-tapping screw, flat head M2.5×8",
-        "qty": "1 pack",
-        "spec": "Spec: M2.5 × 8 mm, flat-head Phillips.\nUse: thick-wall sections and multi-layer stack-up locations",
-        "image": "image/microduck-bom-21.png"
-    },
-    {
-        "no": 22,
-        "category": "Chemical / Adhesive",
-        "name": "Loctite threadlocker 243",
-        "qty": "1",
-        "spec": "Type: medium-strength anaerobic thread locker (removable). Color: blue; suitable for M2–M12 threads.\nCure: fixture in 10–20 min at room temperature, full cure in 24 h.\n★ Use: anti-loosening for servo horn and motor-bracket screws.\n★ Beware of counterfeits priced below ¥15 — verify genuine Henkel packaging",
-        "image": "image/microduck-bom-22.png"
-    },
-    {
-        "no": 23,
-        "category": "Anti-Slip Material",
-        "name": "Sole anti-slip pad",
-        "qty": "1",
-        "spec": "Material: rubber/silicone self-adhesive anti-slip pad; 1.5 mm thick, trimmable.\nUse: applied to the sole contact surface to increase friction for walking on a tabletop.\n★ Thickness affects standing height and gait — keep a uniform thickness across the whole unit",
-        "image": "image/microduck-bom-23.png"
-    }
+        bom: [
+      { no: 1, category: "Main Controller (SBC)", name: "Radxa Zero 3W main board (2 GB RAM)", qty: "1", spec: "Ultra-compact RK3566 single-board computer with 2 GB RAM; pin headers pre-soldered.", image: "image/microduck-bom-01.jpg" },
+      { no: 2, category: "Storage Media", name: "64 GB TF card (Ezviz)", qty: "1", spec: "Model CS-CMT-CARDT64G; 64 GB capacity; TF (microSD) card.", image: "image/microduck-bom-02.png" },
+      { no: 3, category: "Card Reader", name: "SD card reader (ChuanYu)", qty: "1", spec: "Model C296; 2-in-1 card reader supporting up to 2 TB; USB 2.0, compatible with Windows, macOS and Linux; hot-swap supported.", image: "image/microduck-bom-03.png" },
+      { no: 4, category: "Expansion Interface Board", name: "Raspberry Pi Robot HAT board", qty: "1", spec: "Board outline 65.0 × 30.9 mm, 4-layer (F_Cu/In1/In2/B_Cu), corner radius R3.5. BOM 47 rows / 123 components (incl. 5 rows, 9 DNP), 113 populated positions. Servo bus: half-duplex TTL via 74LVC1G08 + SN74LVC1G125/126, direction controlled by Dynamixel_dir. Power: +BATT feeds servos directly; AP63205 + 6.8 µH buck → +5 V (2 A) for the controller. Audio: TLV320AIC3104 (i2c3 0x18 + i2s3) + PAM8406 amplifier + MEMS microphone. Expansion: J5–J8 JST SH 1 mm 4P (Qwiic) for ToF. Servo ports: J13/J14 JST EH 3P (TTL); J3/J11 JST EH 4P (RS-485, 3 A max).", image: "image/microduck-bom-04.png" },
+      { no: 5, category: "Sensor Adapter Board", name: "imu_to_dxl adapter board", qty: "1", spec: "IMU IC LSM6DSV16XTR; MCU Cortex-M4 @ 120 MHz for high-speed processing. Supply 5–24 V (min 4.5 V). Servo single-bus TTL serial, 3.3 V logic (do not exceed 3.6 V). Baud 1 Mbps; address 200. Auto-adapts Dynamixel 2.0 or Feetech protocol (detailed protocol docs available). Supports in-robot online firmware upgrade. Power conversion efficiency >90%. Operating temperature −40 °C to +85 °C.", image: "image/microduck-bom-05.png" },
+      { no: 6, category: "Bus Distribution Board", name: "Servo bus HUB + banana PCB", qty: "1", spec: "15-channel servo bus parallel split + battery power distribution. Power connectors: 2.5 mm banana plugs (gold-plated PCB) ×2. Hybrid daisy-chain/star topology to reduce harness length and voltage drop. Secured by the banana_pcb_locker printed part. Bus is half-duplex TTL — ensure common GND and consistent wire order.", image: "image/microduck-bom-06.png" },
+      { no: 7, category: "Actuator / Servo", name: "Feetech HD1901M bus servo", qty: "15", spec: "Dimensions 34 × 20 × 23 mm, weight 21 ± 2 g. Horn is a protruding 25T spline, not compatible with the XL330 recessed spline; position-count direction is inverted vs. the XL330 (set all 15 units to −1).", image: "image/microduck-bom-07.png" },
+      { no: 8, category: "Debugging Tool", name: "Feetech URT-2 servo debug board", qty: "1", spec: "Model FE-URT-1 multi-function serial converter (USB to RS-485 / TTL). Dimensions 55.8 × 36.6 × 11.5 mm; mounting-hole pitch 48.8 × 28.8 mm; weight 12.5 g. Mini-USB, USB 2.0 full-speed device.", image: "image/microduck-bom-08.png" },
+      { no: 9, category: "Power / Battery", name: "NP-F550 battery", qty: "1", spec: "Dimensions 25 × 38.4 × 70.7 mm; Li-ion, approx. 110 g. Voltage 8.4 V; approx. 2200 mAh with charge-level indicator (housing color may vary). 1 pc included — a spare battery is recommended.", image: "image/microduck-bom-09.png" },
+      { no: 10, category: "Cable Harness", name: "AMP 2.0 double-ended adapter cable (servo debug)", qty: "1", spec: "5264-terminal 3P/4P double-ended cable for servo daisy-chaining and debugging. Length 10–30 cm per routing. Wire order matches the HAT's JST EH ports: GND – VCC – Signal.", image: "image/microduck-bom-10.png" },
+      { no: 11, category: "Vision Sensor", name: "8MP IMX219 camera module", qty: "1", spec: "Sony IMX219 (CMOS) 1/4.0 type; 8 MP; active resolution 3280 (H) × 2464 (V); pixel size 1.12 µm × 1.12 µm.", image: "image/microduck-bom-11.png" },
+      { no: 12, category: "Ranging / Time-of-Flight Sensor", name: "VL53L8CX ToF module", qty: "1", spec: "ST VL53L5CX (VL53L5X V2), direct ToF multi-zone ranging. 8 × 8 = 64 zones (software-switchable to 4 × 4 = 16). 0–400 cm absolute distance, unaffected by target color or reflectivity.", image: "image/microduck-bom-12.png" },
+      { no: 13, category: "Audio Component", name: "Speaker", qty: "1", spec: "8 Ω / 2 W small-cavity speaker (2040 type). Connects to the HAT's PAM8406 amplifier output (Wago terminal). Required only with the HAT audio solution. Lead wires approx. 10 cm.", image: "image/microduck-bom-13.png" },
+      { no: 14, category: "Mechanical Bearing", name: "Bearing 10×15×3", qty: "3", spec: "ID 10 mm / OD 15 mm / thickness 3 mm. Miniature deep-groove ball bearing (flanged F6800 recommended). Axial positioning of leg joints. GCr15 bearing steel; ZZ dust shield recommended.", image: "image/microduck-bom-14.png" },
+      { no: 15, category: "Mechanical Bearing", name: "Bearing 16×22×4", qty: "11", spec: "ID 16 mm / OD 22 mm / thickness 4 mm. Thin-section deep-groove (6802). Hip roll housing (top socket press-fit) + knee joints — 11 positions total.", image: "image/microduck-bom-15.png" },
+      { no: 16, category: "Mechanical Bearing", name: "Bearing 3×10×4 (623ZZ)", qty: "4", spec: "ID 3 mm / OD 10 mm / thickness 4 mm; 623ZZ miniature deep-groove ball bearing.", image: "image/microduck-bom-16.png" },
+      { no: 17, category: "Fastener / Screw", name: "Self-tapping screw, flat tail M2×5", qty: "1 pack", spec: "M2 × 5 mm, flat tail (pan head), Phillips. Nickel-plated carbon steel or stainless steel. For self-tapping into printed plastics — avoid over-torquing.", image: "image/microduck-bom-17.png" },
+      { no: 18, category: "Fastener / Screw", name: "Self-tapping screw, flat tail M2×6", qty: "1 pack", spec: "M2 × 6 mm, flat tail Phillips. Nickel-plated carbon steel / stainless steel. Housing-to-inner-frame connections (thicker walls).", image: "image/microduck-bom-18.png" },
+      { no: 19, category: "Fastener / Screw", name: "Self-tapping screw, flat tail M2×8", qty: "1 pack", spec: "M2 × 8 mm, flat tail Phillips. For penetrating two printed layers. Excess length may hit the servo or PCB — check depth before assembly.", image: "image/microduck-bom-19.png" },
+      { no: 20, category: "Fastener / Screw", name: "Self-tapping screw, flat tail M2.5×6", qty: "1 pack", spec: "M2.5 × 6 mm, flat tail Phillips. Higher-load housing connections. Not interchangeable with M2 — different hole diameters.", image: "image/microduck-bom-20.png" },
+      { no: 21, category: "Fastener / Screw", name: "Self-tapping screw, flat tail M2.5×8", qty: "1 pack", spec: "M2.5 × 8 mm, flat tail Phillips. Thick-wall and multi-layer stack-up locations.", image: "image/microduck-bom-21.png" },
+      { no: 22, category: "Anti-Slip Material", name: "Sole anti-slip pad", qty: "1", spec: "Rubber/silicone self-adhesive pad; 1.5 mm thick, trimmable. Applied to the sole contact surface to increase tabletop walking friction. Keep a uniform thickness across the unit.", image: "image/microduck-bom-22.png" }
     ],
     github: "https://github.com/UnitClaw",
     contact: { email: "Support@wwntAI.com", phone: "+1-662-681-4342", whatsapp: "+86-189-2582-6701" },

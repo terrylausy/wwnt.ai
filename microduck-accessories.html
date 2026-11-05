@@ -194,11 +194,44 @@
           </div>
         </div>
       </section>
+
+      <!-- Bill of Materials -->
+      <section class="section">
+        <div class="container">
+          <div class="bom-heading" style="margin-bottom: 1.25rem">
+            <h2>Bill of Materials — Set of MicroDuck Parts</h2>
+            <p>22 line items · 3D-printed plastic parts not included</p>
+          </div>
+          <div id="parts-bom" class="bom-list"></div>
+        </div>
+      </section>
     </main>
 
     <div id="site-footer"></div>
 
+    <script src="js/data.js?v=20261105a"></script>
     <script src="js/include.js?v=20261028b"></script>
     <script src="js/mobile.js?v=20260922"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const parts = PRODUCTS.find((p) => p.id === "wwnt-microduck-parts");
+        const el = document.getElementById("parts-bom");
+        if (parts && parts.bom && el) {
+          el.innerHTML = parts.bom
+            .map(
+              (item) => `
+            <div class="bom-item glass-panel">
+              <div class="bom-img"><img src="${item.image}" alt="${item.name}" /></div>
+              <div class="bom-body">
+                <div class="bom-title"><strong>${item.no}. ${item.name}</strong><span class="pill pill-soft">Qty: ${item.qty}</span></div>
+                <div class="bom-category">${item.category}</div>
+                <div class="bom-spec">${item.spec.replace(/\n/g, "<br />")}</div>
+              </div>
+            </div>`
+            )
+            .join("");
+        }
+      });
+    </script>
   </body>
 </html>
