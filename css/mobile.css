@@ -917,7 +917,7 @@ html.mobile-active .courses-nav-item {
 html.mobile-active .courses-nav-item.active {
   background: var(--blue-500);
   color: white;
-  box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+  box-shadow: 0 4px 12px rgba(93,160,0,0.3);
 }
 
 html.mobile-active .courses-nav-item .nav-icon {
@@ -3289,7 +3289,7 @@ html.mobile-active .help-sidebar-nav {
 html.mobile-active .help-sidebar-link {
   padding: 8px 12px !important;
   font-size: 0.82rem !important;
-  background: rgba(59, 130, 246, 0.05) !important;
+  background: rgba(93, 160, 0, 0.05) !important;
   border-radius: 20px !important;
 }
 

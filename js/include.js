@@ -7,7 +7,7 @@ async function loadPartial(url, targetId) {
   const target = document.getElementById(targetId);
   if (!target) return;
 
-  const response = await fetch(url + "?v=20261028c");
+  const response = await fetch(url + "?v=20261028d");
   if (!response.ok) {
     throw new Error(`Failed to load ${url}: ${response.status}`);
   }
