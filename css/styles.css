@@ -1571,7 +1571,7 @@ a.contact-item:hover {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr repeat(4, 1fr);
+  grid-template-columns: 1.4fr repeat(3, 1fr);
   gap: 2rem;
   padding: 3rem 0 2rem;
 }
@@ -7937,11 +7937,10 @@ html.mobile-active .mobile-nav .nav-link-external {
   font-weight: 700;
 }
 
-/* ===== NVIDIA Inception footer banner ===== */
-.nvidia-inception {
-  padding: 2.5rem 1rem 0;
-}
-.nvidia-inception-inner {
+/* ===== Footer bottom: NVIDIA Inception + partners ===== */
+.footer-bottom-strip {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 1rem 2.75rem;
   text-align: center;
 }
 .nvidia-inception-title {
@@ -7952,14 +7951,32 @@ html.mobile-active .mobile-nav .nav-link-external {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
 }
-.nvidia-inception img {
+.nvidia-inception-img {
+  display: block;
+  margin-inline: auto;
   max-width: 920px;
   width: 100%;
   height: auto;
   border-radius: 14px;
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.4);
 }
+.footer-partner-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+.footer-partner-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 @media (max-width: 768px) {
-  .nvidia-inception { padding-top: 1.75rem; }
+  .footer-bottom-strip { padding: 1.75rem 1rem 2rem; }
   .nvidia-inception-title { font-size: 0.9rem; }
+  .nvidia-inception-img { border-radius: 10px; }
 }
